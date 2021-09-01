@@ -51,7 +51,9 @@
 }
 
 /* resets */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
@@ -60,7 +62,7 @@
 }
 
 .fa-cv::before {
-  content: 'CV';
+  content: "CV";
   font-family: var(--ff-pms);
   font-weight: var(--fw-bolder);
 }
@@ -109,9 +111,7 @@ a:hover,
 a:focus {
   text-decoration: underline;
   color: rgba(255, 255, 255, 0.75);
-  text-shadow: 
-    0 0 1rem var(--color-accent),
-    0 0 1rem var(--color-accent);
+  text-shadow: 0 0 1rem var(--color-accent), 0 0 1rem var(--color-accent);
 }
 
 section,
@@ -141,7 +141,7 @@ footer button:focus {
 
 footer button::before {
   z-index: -1;
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -242,7 +242,7 @@ section > article,
 .hamburger:focus {
   text-decoration: underline;
   fill: rgba(255, 255, 255, 0.75);
-  filter: drop-shadow(0 0 0.5rem var(--color-accent)) 
+  filter: drop-shadow(0 0 0.5rem var(--color-accent))
     drop-shadow(0 0 0.5rem var(--color-accent));
 }
 
@@ -285,7 +285,7 @@ aside:focus #menu {
   transition: transform 200ms;
 }
 
-.menu-open #menu {
+.menu--open #menu {
   transform: translateY(0);
 }
 
@@ -332,9 +332,7 @@ aside:focus #menu {
 #menu a:hover,
 #menu a:focus {
   color: rgba(255, 255, 255, 0.75);
-  text-shadow: 
-    0 0 1rem var(--color-accent),
-    0 0 1rem var(--color-accent);
+  text-shadow: 0 0 1rem var(--color-accent), 0 0 1rem var(--color-accent);
 }
 
 .menu__link:not(:first-child) {
@@ -355,9 +353,9 @@ aside:focus #menu {
   display: flex;
   align-items: center;
   justify-content: center;
-  clip-path: polygon(0 0, 100%  0, 100% calc(100% - var(--tilt-angle)), 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--tilt-angle)), 0 100%);
   background-color: var(--color-primary);
-  background: url(https://images.unsplash.com/photo-1518655048521-f130df041f66);
+  background: url("https://images.unsplash.com/photo-1518655048521-f130df041f66?fit=crop&h=400&w=400");
   background-position: right top;
   background-size: cover;
   height: calc(100vh + var(--tilt-angle));
@@ -366,13 +364,17 @@ aside:focus #menu {
 
 .hero::after {
   z-index: -1;
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(var(--color-mid) 0%, var(--color-primary) 95%, var(--color-primary) 100%);
+  background-image: linear-gradient(
+    var(--color-mid) 0%,
+    var(--color-primary) 95%,
+    var(--color-primary) 100%
+  );
 }
 
 .hero__content {
@@ -387,7 +389,7 @@ aside:focus #menu {
 }
 
 .hero__content::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   height: 0.02em;
@@ -405,13 +407,13 @@ aside:focus #menu {
   text-transform: uppercase;
   font-size: 0.15em;
   text-indent: 1.25em;
-  color:rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.75);
   margin-bottom: 5rem;
 }
 
 .hero__sub-title::before {
   z-index: -1;
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -472,23 +474,28 @@ aside:focus #menu {
   position: relative;
   padding: 10vh 0;
   margin-top: calc(var(--tilt-angle-negative) - 1px);
-  clip-path: polygon(0 var(--tilt-angle), 100% 0, 100% 100%, 0 calc(100% - var(--tilt-angle)));
+  clip-path: polygon(
+    0 var(--tilt-angle),
+    100% 0,
+    100% 100%,
+    0 calc(100% - var(--tilt-angle))
+  );
 }
 
 .intro::after {
   z-index: -1;
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: url(https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2);
+  background-image: url("https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?fit=crop&h=400&w=400");
   background-position: center center;
   background-attachment: fixed;
   background-size: 100vmax 100vmax;
   opacity: 0.5;
-  background-image: url('/assets/img/puzzle_flow.gif');
+  background-image: url("/assets/img/puzzle_flow.gif");
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
@@ -516,7 +523,7 @@ aside:focus #menu {
 }
 
 .intro__title::after {
-  content: '';
+  content: "";
   width: 50%;
   height: 0.05em;
   background: var(--color-light);
@@ -531,7 +538,12 @@ aside:focus #menu {
   background-color: var(--color-accent);
   margin-top: calc(var(--tilt-angle-negative) - 1px);
   padding-top: 3rem;
-  clip-path: polygon(0 0, 100% var(--tilt-angle), 100% calc(100% - var(--tilt-angle)), 0 100%);
+  clip-path: polygon(
+    0 0,
+    100% var(--tilt-angle),
+    100% calc(100% - var(--tilt-angle)),
+    0 100%
+  );
 }
 
 .about-me__content {
@@ -539,7 +551,7 @@ aside:focus #menu {
   flex-direction: row;
   flex-wrap: wrap;
   background-color: var(--color-accent);
-  background-image: url('https://images.saymedia-content.com/.image/t_share/MTc0NDYxMTQ2NjMwNjYxNDgw/best-tie-fighters-star-wars.png');
+  background-image: url("https://images.saymedia-content.com/.image/t_share/MTc0NDYxMTQ2NjMwNjYxNDgw/best-tie-fighters-star-wars.png");
   background-repeat: no-repeat;
   background-size: 30rem;
   background-position: top right;
@@ -555,7 +567,7 @@ aside:focus #menu {
 }
 
 .about-me__title::after {
-  content: '';
+  content: "";
   right: 0;
   width: 100%;
   height: 0.05em;
@@ -597,7 +609,7 @@ aside:focus #menu {
 
 .about-me__sub-title span::before {
   z-index: inherit;
-  content: '&';
+  content: "&";
   position: inherit;
   top: -0.01em;
   left: -0.01em;
@@ -623,7 +635,12 @@ aside:focus #menu {
   background-color: var(--color-accent__dark);
   background-image: linear-gradient(var(--color-accent__dark), transparent);
   margin-top: calc(var(--tilt-angle-negative) - 1px);
-  clip-path: polygon(0 var(--tilt-angle), 100% 0, 100% 100%, 0 calc(100% - var(--tilt-angle)));
+  clip-path: polygon(
+    0 var(--tilt-angle),
+    100% 0,
+    100% 100%,
+    0 calc(100% - var(--tilt-angle))
+  );
 }
 
 .skills__title {
@@ -635,7 +652,7 @@ aside:focus #menu {
 }
 
 .skills__title::after {
-  content: '';
+  content: "";
   right: 0;
   width: 100%;
   height: 0.05em;
@@ -730,7 +747,7 @@ aside:focus #menu {
 }
 
 .portfolio__content > .portfolio__title::after {
-  content: '';
+  content: "";
   right: 0;
   width: 100%;
   height: 0.05em;
@@ -770,7 +787,7 @@ aside:focus #menu {
 }
 
 .footer__title::after {
-  content: '';
+  content: "";
   right: 0;
   width: 100%;
   height: 0.05em;
