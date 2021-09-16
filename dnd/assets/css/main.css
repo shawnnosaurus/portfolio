@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color: #fff;
+  font-size: 1vmin;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: flex-end;
+  height: 100vh;
+  background: #000;
+  background-image: url("https://uploads.codesandbox.io/uploads/user/6c1df696-43ea-4c58-a664-391b005f6bd9/-qrp-bg.jpg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(5px);
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  position: absolute;
+  inset: 1rem;
+}
+
+#logo {
+  height: 10rem;
+}
+
+.tier ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.skill[active] {
+  background: linear-gradient(#ffffad, #dba837);
+  box-shadow: 0 0 1em #ffffad, 0 1em 2em #000000;
+  border: solid 1px rgb(100, 100, 100);
+}
+
+.skill[active] .icon {
+  box-shadow: inset 0 0 1.25em #ffffad;
+  border: solid 1px rgb(100, 100, 100);
+}
+
+.skill {
+  font-size: 1rem;
+  margin: 1em;
+  padding: 0.75em;
+  border-radius: 1em;
+  background: #252525;
+  border: solid 1px #000;
+}
+
+.skill[data-skill-points]::after {
+  z-index: 0;
+  position: absolute;
+  content: attr(data-skill-points);
+  background: #000;
+  padding: 0.25em;
+  border-radius: 0.5em;
+  margin-left: 8em;
+  border: solid 1px rgb(150, 150, 150);
+}
+
+.skill .icon {
+  position: relative;
+  width: 10em;
+  height: 10em;
+  background-color: #000;
+  border-radius: inherit;
+  overflow: hidden;
+  border: solid 1px #000;
+  cursor: pointer;
+}
+
+.skill .icon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/dnd/assets/img/icon-sprite.png") no-repeat top left;
+  background-size: 100em 60em;
+  transition: opacity 0.3s ease-out;
+  opacity: 1;
+  box-shadow: inherit;
+}
+
+.skill[data-skill-id="1"] .icon::before {
+  background-position: 75% 0%;
+}
+
+.skill[data-skill-id="2"] .icon::before {
+  background-position: 50% 0%;
+}
+
+.skill[data-skill-id="3"] .icon::before {
+  background-position: 62% 40%;
+}
+
+.skill[data-skill-id="4"] .icon::before {
+  background-position: 88% 60%;
+}
+
+.skill[data-skill-id="3.1"] .icon::before {
+  background-position: 62% 60%;
+}
+
+.skill[data-skill-id="4.1"] .icon::before {
+  background-position: 75% 60%;
+}
+
+.skill[data-skill-points^="0/"] .icon::before {
+  opacity: 0.35;
+}
+
+.skill[data-skill-points="2/2"],
+.skill[data-skill-points="2/2"] .icon {
+  box-shadow: none !important;
+}
+
+.skill .tool-tip {
+  z-index: 1;
+  display: none;
+  flex-direction: column;
+  font-size: 3.5rem;
+  border-radius: 0.5em;
+  background: #000;
+  width: 25em;
+  padding: 1em;
+  box-shadow: 0 6px 11px #000;
+  border: 1px solid #333;
+  position: absolute;
+  right: 0;
+}
+
+.skill:hover .tool-tip,
+.skill:focus .tool-tip {
+  display: flex;
+}

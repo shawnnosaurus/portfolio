@@ -2,16 +2,38 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Shawn Genlloud Portfolio</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  
+  <meta itemprop="image" content="~/assets/img/portfolio_screenshot.jpg" />
+
+  <meta name="twitter:site" content="~/index.html" />
+  <meta name="twitter:image" content="~/assets/img/portfolio_screenshot.jpg" />
+  <meta name="twitter:title" content="Shawn Genlloud's Portfolio" />
+  <meta name="twitter:description" content="The portfolio of the web Developer & Designer named Shawn Genlloud." />
+  <meta name="twitter:card" content="shawn_genlloud_portfolio" />
+
+  <meta property="og:url" content="~/index.html" />
+  <meta property="og:image" content="~/assets/img/portfolio_screenshot.jpg" />
+  <meta property="og:title" content="Shawn Genlloud's Portfolio" />
+  <meta property="og:description" content="The portfolio of the web Developer & Designer named Shawn Genlloud." />
+
+  <meta name="apple-mobile-web-app-capable" content="no" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="apple-touch-icon" href="./assets/img/icon/jpg" />
+  <link rel="shortcut icon" href="./assets/img/icon/jpg" />
+
+  <title>Shawn Genlloud's Portfolio</title>
+
   <style>
     body {
       opacity: 0
     }
   </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
   <link rel="stylesheet" href="./assets/css/main.css?v=1.0.0" prefetch />
 </head>
 
@@ -21,11 +43,11 @@
       <div class="header__content">
         <a tabindex="-1" class="header__logo" href="#home">Shawn Genlloud</a>
         <ul class="header__socials">
-          <li><a tabindex="-1" tabindex="0" class="header__social" href="./assets/cvShawnJohnGenlloud.docx"><i
+          <li><a tabindex="-1" tabindex="0" class="header__social" href="./assets/cvShawnJohnGenlloud.docx" title="Download my CV." aria-label="Download my CV."><i
                 class="fa fa-cv"></i></a></li>
-          <li><a tabindex="-1" class="header__social" href="#contact"><i class="fa fa-envelope"></i></a></li>
-          <li><a tabindex="-1" class="header__social" href="#"><i class="fa fa-github"></i></a></li>
-          <li><a tabindex="-1" class="header__social" href="#"><i class="fa fa-linkedin"></i></a></li>
+          <li><a tabindex="-1" class="header__social" href="mailto:me@shawngenlloud.com?subject=Employment%20Enquiry%20From%20Portfolio&body=Good%20Day%20Shawn" title="Drop me an email." aria-label="Drop me an email."><i class="fa fa-envelope"></i></a></li>
+          <li><a tabindex="-1" class="header__social" href="https://codepen.io/shawnnosaurus" title="See my CodePen projects." aria-label="See my CodePen projects." target="_blank"><i class="fa fa-codepen"></i></a></li>
+          <li><a tabindex="-1" class="header__social" href="https://www.linkedin.com/in/shawn-genlloud-597727b8/" title="Follow me on LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a></li>
         </ul>
       </div>
     </header>
@@ -34,16 +56,16 @@
       <article class="hero__content">
         <h6 class="hero__sub-title">Web Developer &amp; Designer</h6>
         <h1 class="hero__title"><a tabindex="-1" href="#about"
-            aria-label="Jump to About Section">Shawn<span>Genlloud</span></a></h1>
+            aria-label="Jump to About Section" title="Jump to About Section">Shawn<span>Genlloud</span></a></h1>
         <ul class="hero__socials">
           <li><a tabindex="0" class="hero__social" href="./assets/cvShawnJohnGenlloud.docx"
-              aria-label="Download my CV"><i class="fa fa-cv"></i></a>
+              aria-label="Download my CV" title="Download my CV"><i class="fa fa-cv"></i></a>
           </li>
-          <li><a tabindex="0" class="hero__social" href="#contact" aria-label="Email me"><i class="fa fa-envelope"></i></a>
+          <li><a tabindex="0" class="hero__social" href="mailto:me@shawngenlloud.com?subject=Employment%20Enquiry%20From%20Portfolio&body=Good%20Day%20Shawn" title="Drop me an email." aria-label="Drop me an email." ><i class="fa fa-envelope"></i></a>
           </li>
-          <li><a tabindex="0" class="hero__social" href="#" aria-label="See my Github"><i class="fa fa-github"></i></a>
+          <li><a tabindex="0" class="hero__social" href="https://codepen.io/shawnnosaurus" title="See my CodePen projects." aria-label="See my CodePen projects." target="_blank"><i class="fa fa-codepen"></i></a>
           </li>
-          <li><a tabindex="0" class="hero__social" href="#" aria-label="Follow me on LinkedIn"><i
+          <li><a tabindex="0" class="hero__social" href="https://www.linkedin.com/in/shawn-genlloud-597727b8/" title="Follow me on LinkedIn." aria-label="Follow me on LinkedIn." target="_blank"><i
                 class="fa fa-linkedin"></i></a></li>
         </ul>
       </article>
@@ -51,8 +73,8 @@
 
     <section class="intro">
       <article class="intro__content">
-        <h2 class="intro__title">Mission Statement</h2>
-        <p>Blurring the lines between creative and analytical thinking.</p>
+        <h2 class="intro__title">Quest</h2>
+        <p>Inclusivity through humility, while blurring the lines between creative and analytical thinking.</p>
       </article>
     </section>
 
@@ -63,6 +85,9 @@
           <p>
             I started my devleopment career as a graphic designer, with a highly acute sense of problem solving skills.
           </p>
+          <p>
+            Shortly after my first design position, I realised that programming already aligned with my passions in puzzle building and psychology.
+          </p>
         </div>
         <div class="about-me__image">
           <h6 class="about-me__sub-title">Developer<br /><span>&amp;</span>&nbsp;Designer</h6>
@@ -72,84 +97,76 @@
       </article>
     </section>
 
-    <section class="skills" id="skills">
-      <article class="skills__content">
-        <h2 class="skills__title">Ability Points</h2>
-        <!-- <iframe class="skills__items" src="http://www.dungeonsanddevelopers.com/#_a2b2c2_15_Shawnnosaurus" frameborder="0" scrollbar="no"></iframe> -->
-      </article>
-    </section>
-
     <section class="portfolio" id="portfolio">
       <article class="portfolio__content">
         <h2 class="portfolio__title">Unlocked Achievements</h2>
         <div class="portfolio__items">
-          <!-- https://shawng.carbonmade.com/ -->
 
-          <!-- Portfolio item 1 -->
+          <!-- Portfolio Jackpots Product -->
           <figure class="portfolio__item featured">
-            <a href="#" class="portfolio__link">
+            <a href="./projects/jackpots.html" target="_blank" class="portfolio__link">
               <img class="portfolio__image"
-                src="https://images.unsplash.com/photo-1555538284-0649b24e48ab?fit=crop&h=400&w=400"
-                alt="portfolio item" />
+                src="https://images.unsplash.com/photo-1517085908802-f56a43681c18?fit=crop&h=400&w=400"
+                alt="Jackpots Product" />
               <figcaption>
-                <h2 class="portfolio__title">Project Name</h2>
+                <h2 class="portfolio__title">Jackpots Product</h2>
+                <p class="portfolio__desc">I solely architected, built, designed and supported a custom jackpots solution.</p>
+                <b>More info <i class="fa fa-arrow-right"></i></b>
+              </figcaption>
+            </a>
+          </figure>
+
+          <!-- Portfolio Credit Approval Processing System -->
+          <figure class="portfolio__item">
+            <a href="./projects/caps.html" target="_blank" class="portfolio__link">
+              <img class="portfolio__image"
+                src="https://images.unsplash.com/photo-1588286492514-ddb61b527086?fit=crop&h=400&w=400"
+                alt="Credit Approval Processing System" />
+              <figcaption>
+                <h2 class="portfolio__title">Credit Approval & Processing System</h2>
+                <p class="portfolio__desc">Credit application and auditing project.</p>
+                <b>More info <i class="fa fa-arrow-right"></i></b>
+              </figcaption>
+            </a>
+          </figure>
+
+          <!-- Portfolio Telecommunication Suit -->
+          <figure class="portfolio__item">
+            <a href="./projects/telecomms.html" target="_blank" class="portfolio__link">
+              <img class="portfolio__image"
+                src="https://images.unsplash.com/photo-1528845922818-cc5462be9a63?fit=crop&h=400&w=400"
+                alt="Telecommunication Suit">
+              <figcaption>
+                <h2 class="portfolio__title">Telecommunications Suit</h2>
                 <p class="portfolio__desc">A short description could go right here</p>
                 <b>More info <i class="fa fa-arrow-right"></i></b>
               </figcaption>
             </a>
           </figure>
 
-          <!-- Portfolio item 2 -->
+          <!-- Portfolio My Portfolio Site -->
           <figure class="portfolio__item">
-            <a href="#" class="portfolio__link">
+            <a href="./projects/portfolio.html" target="_blank" class="portfolio__link">
               <img class="portfolio__image"
-                src="https://images.unsplash.com/photo-1593630265256-d2cc162ab58f?fit=crop&h=400&w=400"
-                alt="portfolio item" />
+                src="./assets/img/portfolio_screenshot.jpg"
+                alt="My Portfolio Site" />
               <figcaption>
-                <h2 class="portfolio__title">Project Name</h2>
-                <p class="portfolio__desc">A short description could go right here</p>
+                <h2 class="portfolio__title">My Portfolio Site</h2>
+                <p class="portfolio__desc">All about this very site you're reading now.</p>
                 <b>More info <i class="fa fa-arrow-right"></i></b>
               </figcaption>
             </a>
           </figure>
 
-          <!-- Portfolio item 3 -->
+          <!-- Portfolio Miscellaneous -->
           <figure class="portfolio__item">
-            <a href="#" class="portfolio__link">
+            <a href="./projects/misc.html" target="_blank" class="portfolio__link">
               <img class="portfolio__image"
-                src="https://images.unsplash.com/photo-1609619385002-f40f1df9b7eb?fit=crop&h=400&w=400"
-                alt="portfolio item">
-              <figcaption>
-                <h2 class="portfolio__title">Project Name</h2>
-                <p class="portfolio__desc">A short description could go right here</p>
-                <b>More info <i class="fa fa-arrow-right"></i></b>
-              </figcaption>
-            </a>
-          </figure>
-
-          <!-- Portfolio item 4 -->
-          <figure class="portfolio__item">
-            <a href="#" class="portfolio__link">
-              <img class="portfolio__image"
-                src="https://images.unsplash.com/photo-1416339158484-9637228cc908?fit=crop&h=400&w=400"
+                src="https://images.unsplash.com/photo-1523726491678-bf852e717f6a?fit=crop&h=400&w=400"
                 alt="portfolio item" />
               <figcaption>
-                <h2 class="portfolio__title">Project Name</h2>
-                <p class="portfolio__desc">A short description could go right here</p>
-                <b>More info <i class="fa fa-arrow-right"></i></b>
-              </figcaption>
-            </a>
-          </figure>
-
-          <!-- Portfolio item 5 -->
-          <figure class="portfolio__item">
-            <a href="#" class="portfolio__link">
-              <img class="portfolio__image"
-                src="https://images.unsplash.com/photo-1618329027137-a520b57c6606?fit=crop&h=400&w=400"
-                alt="portfolio item" />
-              <figcaption>
-                <h2 class="portfolio__title">Project Name</h2>
-                <p class="portfolio__desc">A short description could go right here</p>
+                <h2 class="portfolio__title">Miscellaneous</h2>
+                <p class="portfolio__desc">A hodgepodge alphabet soup of old randoms.</p>
                 <b>More info <i class="fa fa-arrow-right"></i></b>
               </figcaption>
             </a>
@@ -159,43 +176,12 @@
         <article>
     </section>
 
-    <footer class="footer" id="contact">
-      <div class="footer__content">
-        <h2 class="footer__title">Get in Touch</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum velit, officiis incidunt sequi odio a?</p>
-
-        <form class="footer__contact" action="">
-          <label class="contact__label contact__label__name">Name:
-            <input type="text" id="name" />
-          </label>
-
-          <label class="contact__label contact__label__email">Email:
-            <input type="email" id="email" />
-          </label>
-
-          <label class="contact__label contact__label__message">Message:
-            <textarea id="message" rows="4"></textarea>
-          </label>
-
-          <button class="contact__button" type="submit">Send Message</button>
-        </form>
-
-        <ul class="footer__social-links">
-          <li>
-            <a tabindex="-1" class="footer__social-link" href="./assets/cvShawnJohnGenlloud.docx" target="_blank"><i class="fa fa-cv"
-                aria-hidden="true"></i>(Curriculum Vitae)</a>
-          </li>
-          <li>
-            <a tabindex="-1" class="footer__social-link" href="#" target="_blank"><i class="fa fa-github"
-                aria-hidden="true"></i>github</a>
-          </li>
-          <li>
-            <a tabindex="-1" class="footer__social-link" href="#" target="_blank"><i class="fa fa-linkedin"
-                aria-hidden="true"></i>linkedin</a>
-          </li>
-        </ul>
-      </div>
-    </footer>
+    <!-- <section class="skills" id="skills">
+      <article class="skills__content">
+        <h2 class="skills__title">Ability Points</h2>
+        <iframe class="skills__items" src="http://www.dungeonsanddevelopers.com/#_a2b2c2_15_Shawnnosaurus" frameborder="0" scrollbar="no"></iframe>
+      </article>
+    </section> -->
 
     <div class="copyright">
       <p>&copy; Copyright - Shawn Genlloud</p>
@@ -222,9 +208,8 @@
         <ul>
           <li><a class="menu__link" href="#home"><i class="fa fa-home"></i>Home</a></li>
           <li><a class="menu__link" href="#about"><i class="fa fa-question"></i>About</a></li>
-          <li><a class="menu__link" href="#skills"><i class="fa fa-book"></i>Skills</a></li>
           <li><a class="menu__link" href="#portfolio"><i class="fa fa-folder"></i>Portfolio</a></li>
-          <li><a class="menu__link" href="#contact"><i class="fa fa-phone"></i>Contact</a></li>
+          <li><a class="menu__link" href="#skills"><i class="fa fa-book"></i>Skills</a></li>
         </ul>
       </div>
     </nav>
