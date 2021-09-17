@@ -36,3 +36,18 @@ p {
 .callout--info {
   color: #2196f3;
 }
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem -1rem;
+  list-style: none;
+}
+
+.tags li {
+  white-space: nowrap;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin: 1rem;
+  background-color: var(--color-accent_dark);
+}
