@@ -374,7 +374,7 @@ aside {
   height: 100%;
   width: 100%;
   opacity: 0.5;
-  background-image: url("./assets/img/puzzle_flow.gif");
+  background-image: url("/assets/img/puzzle_flow.gif");
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
