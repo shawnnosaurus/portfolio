@@ -1,0 +1,53 @@
+@import url("main.css");
+
+body {
+  font-size: 3rem;
+  padding: 3rem;
+  align-items: flex-start;
+}
+
+h1,
+h2,
+h3 {
+  padding: 2rem 0;
+}
+
+p {
+  padding: 0.5rem 0;
+}
+
+.callout {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 0.5em solid currentColor;
+  border-radius: 0.25em;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.callout--error {
+  color: #ff4e3a;
+}
+
+.callout--warning {
+  color: #ff8c3a;
+}
+
+.callout--info {
+  color: #2196f3;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem -1rem;
+  list-style: none;
+}
+
+.tags li {
+  white-space: nowrap;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin: 1rem;
+  background-color: var(--color-accent_dark);
+}
