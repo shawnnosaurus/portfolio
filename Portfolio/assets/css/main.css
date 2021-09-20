@@ -239,7 +239,7 @@ aside {
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--tilt-angle)), 0 100%);
   background-color: var(--color-primary);
   background: url("https://images.unsplash.com/photo-1432821579285-1b649e5b1ce3?fit=crop&h=400&w=400");
-  background-position: center center;
+  background-position: center top;
   background-size: cover;
   height: calc(100vh + var(--tilt-angle));
   max-width: 100%;
@@ -373,11 +373,16 @@ aside {
   left: 0;
   height: 100%;
   width: 100%;
+}
+
+.intro video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
   opacity: 0.5;
-  background-image: url("/assets/img/puzzle_flow.gif");
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
   filter: blur(6px);
 }
 
@@ -476,11 +481,11 @@ aside {
   position: absolute;
   min-width: auto !important;
   color: var(--color-primary);
-  font-size: 8rem;
+  font-size: 4rem;
   line-height: 90%;
   -webkit-text-stroke: 0.1rem #fff;
   text-shadow: 0 0 0 var(--color-light);
-  transform: translate(10%, 75%);
+  transform: translate(10%, 150%);
   filter: drop-shadow(1rem 1rem 0 var(--color-mid));
 }
 
@@ -504,9 +509,11 @@ aside {
 }
 
 .about-me__image {
-  display: table;
+  display: flex;
+  justify-content: center;
   position: sticky;
-  top: 0%;
+  top: 0;
+  left: 50%;
   width: 50%;
   padding: 0 3rem;
 }
@@ -515,7 +522,7 @@ aside {
   max-height: calc(100vh - 12rem);
   margin: auto 0;
   margin-top: 10rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 
 .portfolio {
@@ -774,6 +781,11 @@ aside {
   margin: auto;
 }
 
+.hamburger svg {
+  height: 50%;
+  width: 100%;
+}
+
 @media screen and (max-width: 73rem) {
   .about-me__content {
     background-position: bottom 55% right;
@@ -781,7 +793,6 @@ aside {
 
   .about-me__text,
   .about-me__image,
-  .about-me__image > img,
   .footer__content > * {
     min-width: 100%;
   }
@@ -958,5 +969,17 @@ aside {
 
   .hero {
     z-index: 0;
+  }
+
+  .hero__content {
+    top: calc(var(--tilt-angle) + 0.2em);
+  }
+
+  .hero__title {
+    height: 1.6em;
+  }
+
+  .hero__socials {
+    display: none;
   }
 }

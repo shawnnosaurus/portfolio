@@ -7,24 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <meta itemprop="image" content="/assets/img/portfolio_screenshot.jpg" />
-  <meta name="description" content="The portfolio of the web Developer & Designer named Shawn Genlloud.">
+  <meta name="description" content="I'm a fullstack architect, designer and developer, specialising in the frontend.">
 
   <meta name="twitter:site" content="/index.html" />
   <meta name="twitter:image" content="/assets/img/portfolio_screenshot.jpg" />
   <meta name="twitter:title" content="Shawn Genlloud's Portfolio" />
-  <meta name="twitter:description" content="The portfolio of the web Developer & Designer named Shawn Genlloud." />
+  <meta name="twitter:description" content="I'm a fullstack architect, designer and developer, specialising in the frontend." />
   <meta name="twitter:card" content="shawn_genlloud_portfolio" />
 
   <meta property="og:url" content="/index.html" />
   <meta property="og:image" content="/assets/img/portfolio_screenshot.jpg" />
   <meta property="og:title" content="Shawn Genlloud's Portfolio" />
-  <meta property="og:description" content="The portfolio of the web Developer & Designer named Shawn Genlloud." />
+  <meta property="og:description" content="I'm a fullstack architect, designer and developer, specialising in the frontend." />
 
   <meta name="apple-mobile-web-app-capable" content="no" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <link rel="apple-touch-icon" href="/assets/img/icon.jpg" />
-  <link rel="shortcut icon" href="/assets/img/icon.jpg" />
+  <link rel="apple-touch-icon" href="/assets/img/icon.png" />
+  <link rel="shortcut icon" href="/assets/img/icon.png" />
 
   <title>Shawn Genlloud's Portfolio</title>
 
@@ -43,7 +43,7 @@
       <div class="header__content">
         <a tabindex="-1" class="header__logo" href="#home">Shawn Genlloud</a>
         <ul class="header__socials">
-          <li><a tabindex="-1" tabindex="0" class="header__social" href="./assets/cvShawnJohnGenlloud.docx" title="Download my CV." aria-label="Download my CV."><i
+          <li><a tabindex="-1" tabindex="0" class="header__social" href="./assets/cvShawnJohnGenlloud.docx" download title="Download my CV." aria-label="Download my CV."><i
                 class="fa fa-cv"></i></a></li>
           <li><a tabindex="-1" class="header__social" href="mailto:me@shawngenlloud.com?subject=Employment%20Enquiry%20From%20Portfolio&body=Good%20Day%20Shawn" title="Drop me an email." aria-label="Drop me an email."><i class="fa fa-envelope"></i></a></li>
           <li><a tabindex="-1" class="header__social" href="https://codepen.io/shawnnosaurus" title="See my CodePen projects." aria-label="See my CodePen projects." target="_blank" rel="noreferrer"><i class="fa fa-codepen"></i></a></li>
@@ -72,6 +72,10 @@
     </section>
 
     <section class="intro">
+      <video playsinline autoplay muted loop poster="https://images.unsplash.com/photo-1605712916066-e143c317df72?auto=format&fit=crop&w=1100&q=80">
+        <source src="./assets/video/puzzle_flow.webm" type="video/webm">
+        <source src="./assets/video/puzzle_flow.mp4" type="video/mp4">
+      </video>
       <article class="intro__content">
         <h2 class="intro__title">Quest</h2>
         <p>Inclusivity through humility, while blurring the lines between creative and analytical thinking.</p>
@@ -90,9 +94,11 @@
           </p>
         </div>
         <div class="about-me__image">
-          <h3 class="about-me__sub-title">Developer<br /><span>&amp;</span>&nbsp;Designer</h3>
-          <img src="https://images.unsplash.com/photo-1590146758445-40be7019507d?fit=crop&h=400&w=400"
-            alt="A picture of Shawn Genlloud's Star Wars puzzle" />
+          <div class="about-me__image--center">
+            <h3 class="about-me__sub-title">Developer<br /><span>&amp;</span>&nbsp;Designer</h3>
+            <img src="./assets/img/puzzles.jpg"
+              alt="A picture of Shawn Genlloud's Star Wars puzzle" />
+          </div>
         </div>
       </article>
     </section>
@@ -192,7 +198,7 @@
     <nav>
       <button tabindex="0" class="hamburger" aria-label="Open menu">
         <label>menu</label>
-        <svg x="0px" y="0px" viewBox="0 0 30 17" height="17" width="30">
+        <svg x="0px" y="0px" viewBox="0 0 30 17" preserveAspectRatio="none">
           <g transform="translate(-15 -15)">
             <rect x="15" y="16" class="st0" width="30" height="2"></rect>
           </g>
@@ -206,12 +212,10 @@
       </button>
       <div id="menu">
         <ul>
-          <li><div class="menu__link"></div></li>
           <li><a class="menu__link" href="#home"><i class="fa fa-home"></i>Home</a></li>
           <li><a class="menu__link" href="#about"><i class="fa fa-question"></i>About</a></li>
           <li><a class="menu__link" href="#portfolio"><i class="fa fa-folder"></i>Portfolio</a></li>
           <!-- <li><a class="menu__link" href="#skills"><i class="fa fa-book"></i>Skills</a></li> -->
-          <li><div class="menu__link"></div></li>
         </ul>
       </div>
     </nav>
