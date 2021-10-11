@@ -88,7 +88,7 @@ header {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("/dnd/assets/img/icon-sprite.png") no-repeat top left;
+  background: url("./assets/img/icon-sprite.png") no-repeat top left;
   background-size: 100em 60em;
   transition: opacity 0.3s ease-out;
   opacity: 1;

@@ -15,7 +15,8 @@
   --color-dark: rgba(255, 255, 255, 0.025);
 
   /* typography */
-  --ff-shs: "Source Sans Pro", Helvetica, sans-serif;
+  --ff-shs: "Source Sans Pro", Helvetica,
+    sans-serif;
   --ff-pms: "Poppins", Helvetica, sans-serif;
   --ff-ss: "Six Caps", sans-serif;
 
@@ -27,7 +28,9 @@
   /* Layout */
   --col-max-width: 150rem;
   --tilt-angle: 5rem;
-  --tilt-angle-negative: calc(0px - var(--tilt-angle));
+  --tilt-angle-negative: calc(
+    0px - var(--tilt-angle)
+  );
 }
 
 ::-webkit-scrollbar {
@@ -101,7 +104,7 @@ img {
 }
 
 p {
-  line-height: 125%;
+  line-height: 1.25;
 }
 
 a {
@@ -113,7 +116,8 @@ a:hover,
 a:focus {
   text-decoration: underline;
   color: rgba(255, 255, 255, 0.75);
-  text-shadow: 0 0 1rem var(--color-accent), 0 0 1rem var(--color-accent);
+  text-shadow: 0 0 1rem var(--color-accent),
+    0 0 1rem var(--color-accent);
 }
 
 section,
@@ -168,8 +172,10 @@ section > article,
   max-width: var(--col-max-width);
   background-repeat: no-repeat;
   background-position: top;
-  background-size: 100% calc(100% - var(--tilt-angle));
-  padding: calc(var(--tilt-angle) * 2) var(--tilt-angle);
+  background-size: 100%
+    calc(100% - var(--tilt-angle));
+  padding: calc(var(--tilt-angle) * 2)
+    var(--tilt-angle);
 }
 
 aside {
@@ -236,7 +242,12 @@ aside {
   display: flex;
   align-items: center;
   justify-content: center;
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--tilt-angle)), 0 100%);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - var(--tilt-angle)),
+    0 100%
+  );
   background-color: var(--color-primary);
   background: url("https://images.unsplash.com/photo-1432821579285-1b649e5b1ce3?fit=crop&h=400&w=400");
   background-position: center top;
@@ -356,7 +367,9 @@ aside {
   z-index: 0;
   position: relative;
   padding: 10vh 0;
-  margin-top: calc(var(--tilt-angle-negative) - 1px);
+  margin-top: calc(
+    var(--tilt-angle-negative) - 1px
+  );
   clip-path: polygon(
     0 var(--tilt-angle),
     100% 0,
@@ -420,7 +433,9 @@ aside {
   font-size: 4rem;
   color: var(--color-primary);
   background-color: var(--color-accent);
-  margin-top: calc(var(--tilt-angle-negative) - 1px);
+  margin-top: calc(
+    var(--tilt-angle-negative) - 1px
+  );
   padding-top: 3rem;
   clip-path: polygon(
     0 0,
@@ -428,18 +443,17 @@ aside {
     100% calc(100% - var(--tilt-angle)),
     0 100%
   );
+  background-image: url("https://images.saymedia-content.com/.image/t_share/MTc0NDYxMTQ2NjMwNjYxNDgw/best-tie-fighters-star-wars.png");
+  background-repeat: no-repeat;
+  background-size: 30rem;
+  background-position: top right;
+  background-blend-mode: screen;
 }
 
 .about-me__content {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  background-color: var(--color-accent);
-  background-image: url("https://images.saymedia-content.com/.image/t_share/MTc0NDYxMTQ2NjMwNjYxNDgw/best-tie-fighters-star-wars.png");
-  background-repeat: no-repeat;
-  background-size: 30rem;
-  background-position: top right;
-  background-blend-mode: screen;
 }
 
 .about-me__title {
@@ -486,7 +500,9 @@ aside {
   -webkit-text-stroke: 0.1rem #fff;
   text-shadow: 0 0 0 var(--color-light);
   transform: translate(10%, 150%);
-  filter: drop-shadow(1rem 1rem 0 var(--color-mid));
+  filter: drop-shadow(
+    1rem 1rem 0 var(--color-mid)
+  );
 }
 
 .about-me__sub-title span {
@@ -527,8 +543,13 @@ aside {
 
 .portfolio {
   background-color: var(--color-secondary);
-  background-image: linear-gradient(var(--color-accent__dark), transparent);
-  margin-top: calc(var(--tilt-angle-negative) - 1px);
+  background-image: linear-gradient(
+    var(--color-accent__dark),
+    transparent
+  );
+  margin-top: calc(
+    var(--tilt-angle-negative) - 1px
+  );
   clip-path: polygon(
     0 var(--tilt-angle),
     100% 0,
@@ -637,8 +658,15 @@ aside {
 
 .skills {
   background-color: var(--color-accent__dark);
-  margin-top: calc(var(--tilt-angle-negative) - 1px);
-  clip-path: polygon(0 0, 100% var(--tilt-angle), 100% 100%, 0 100%);
+  margin-top: calc(
+    var(--tilt-angle-negative) - 1px
+  );
+  clip-path: polygon(
+    0 0,
+    100% var(--tilt-angle),
+    100% 100%,
+    0 100%
+  );
 }
 
 .skills__title {
@@ -669,9 +697,19 @@ aside {
 
 .footer {
   background-color: var(--color-primary);
-  background-image: linear-gradient(var(--color-light), transparent);
-  margin-top: calc(var(--tilt-angle-negative) - 1px);
-  clip-path: polygon(0 var(--tilt-angle), 100% 0, 100% 100%, 0 100%);
+  background-image: linear-gradient(
+    var(--color-light),
+    transparent
+  );
+  margin-top: calc(
+    var(--tilt-angle-negative) - 1px
+  );
+  clip-path: polygon(
+    0 var(--tilt-angle),
+    100% 0,
+    100% 100%,
+    0 100%
+  );
 }
 
 .footer__content {
@@ -787,10 +825,6 @@ aside {
 }
 
 @media screen and (max-width: 73rem) {
-  .about-me__content {
-    background-position: bottom 55% right;
-  }
-
   .about-me__text,
   .about-me__image,
   .footer__content > * {
@@ -828,7 +862,9 @@ aside {
   .hamburger:focus {
     text-decoration: underline;
     fill: rgba(255, 255, 255, 0.75);
-    filter: drop-shadow(0 0 0.5rem var(--color-accent))
+    filter: drop-shadow(
+        0 0 0.5rem var(--color-accent)
+      )
       drop-shadow(0 0 0.5rem var(--color-accent));
   }
 
@@ -918,7 +954,8 @@ aside {
   #menu a:hover,
   #menu a:focus {
     color: rgba(255, 255, 255, 0.75);
-    text-shadow: 0 0 1rem var(--color-accent), 0 0 1rem var(--color-accent);
+    text-shadow: 0 0 1rem var(--color-accent),
+      0 0 1rem var(--color-accent);
   }
 
   .menu__link:not(:first-child) {
