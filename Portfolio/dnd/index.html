@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Dungeons & Developers</title>
     <meta
@@ -13,7 +16,11 @@
       name="keywords"
       content="web design development rpg game talent skill"
     />
-    <link rel="stylesheet" href="./assets/css/main.css?v=1.0.0" prefetch />
+    <link
+      rel="stylesheet"
+      href="./assets/css/main.css?v=1.0.0"
+      prefetch
+    />
   </head>
   <body>
     <header>
@@ -22,22 +29,33 @@
         target="_blank"
         title="Original dnd site"
       >
-        <img id="logo" src="/dnd/assets/img/logo.png" alt="dnd logo" />
+        <img id="logo" src="./assets/img/logo.png" alt="dnd logo" />
       </a>
     </header>
 
     <ul class="tiers">
       <li class="tier">
         <ul>
-          <li class="skill" active data-skill-id="1" data-skill-points="0/2">
+          <li
+            class="skill"
+            active
+            data-skill-id="a"
+            data-skill-points="0/2"
+          >
             <div class="icon"></div>
             <div class="tool-tip">
-              <h3 data-bind="text: title" class="skill-name">User Discovery</h3>
-              <div data-bind="html: description" class="skill-description">
-                One of the first steps taken before anything is designed is to
-                determine what the client (both the site requestor and the site
-                user) wants and/or needs. Techniques include simple sketching,
-                card-sortting and experience mapping.
+              <h3 data-bind="text: title" class="skill-name">
+                User Discovery
+              </h3>
+              <div
+                data-bind="html: description"
+                class="skill-description"
+              >
+                One of the first steps taken before anything is
+                designed is to determine what the client (both the
+                site requestor and the site user) wants and/or needs.
+                Techniques include simple sketching, card-sortting and
+                experience mapping.
               </div>
               <ul class="skill-links">
                 <li>
@@ -61,8 +79,8 @@
               >
                 Current rank:
                 <span data-bind="	text: currentRankDescription"
-                  >You know the right questions to ask, and use sketches to
-                  confirm your ideas.</span
+                  >You know the right questions to ask, and use
+                  sketches to confirm your ideas.</span
                 >
               </div>
               <div
@@ -71,8 +89,8 @@
               >
                 Next rank:
                 <span data-bind="	text: nextRankDescription"
-                  >You use advanced techniques like experience mapping to lead
-                  conversations with stakeholders.</span
+                  >You use advanced techniques like experience mapping
+                  to lead conversations with stakeholders.</span
                 >
               </div>
               <hr />
@@ -81,18 +99,25 @@
                   <span class="value"
                     >+<span data-bind="text: value">2</span></span
                   >
-                  <span data-bind="	text: title" class="title">Wisdom</span>
+                  <span data-bind="	text: title" class="title"
+                    >Wisdom</span
+                  >
                 </li>
 
                 <li>
                   <span class="value"
                     >+<span data-bind="text: value">1</span></span
                   >
-                  <span data-bind="	text: title" class="title">Charisma</span>
+                  <span data-bind="	text: title" class="title"
+                    >Charisma</span
+                  >
                 </li>
               </ul>
               <div class="talent-summary">
-                Grants <span data-bind="text: talentSummary">Mindreader</span>
+                Grants
+                <span data-bind="text: talentSummary"
+                  >Mindreader</span
+                >
               </div>
               <div
                 data-bind="text: helpMessage, css:{positive: dependenciesFulfilled}"
@@ -102,13 +127,22 @@
               </div>
             </div>
           </li>
-          <li class="skill" active data-skill-id="2" data-skill-points="0/2">
+          <li
+            class="skill"
+            active
+            data-skill-id="b"
+            data-skill-points="0/2"
+          >
             <div class="icon"></div>
             <div class="tool-tip">
               <h3 data-bind="text: title" class="skill-name">HTML</h3>
-              <div data-bind="html: description" class="skill-description">
-                The main language for creating web pages, HTML is written in the
-                form of tags enclosed in angle brackets (like &lt;&gt;).
+              <div
+                data-bind="html: description"
+                class="skill-description"
+              >
+                The main language for creating web pages, HTML is
+                written in the form of tags enclosed in angle brackets
+                (like &lt;&gt;).
               </div>
               <ul class="skill-links">
                 <li>
@@ -145,7 +179,8 @@
               >
                 Current rank:
                 <span data-bind="	text: currentRankDescription"
-                  >You understand how to create and view a basic web page.</span
+                  >You understand how to create and view a basic web
+                  page.</span
                 >
               </div>
               <div
@@ -155,8 +190,8 @@
                 Next rank:
                 <span data-bind="	text: nextRankDescription"
                   >You understand how to link pages together, design
-                  multi-column layouts, and work with form fields and media
-                  elements.</span
+                  multi-column layouts, and work with form fields and
+                  media elements.</span
                 >
               </div>
               <hr />
@@ -165,21 +200,27 @@
                   <span class="value"
                     >+<span data-bind="text: value">1</span></span
                   >
-                  <span data-bind="	text: title" class="title">Intellect</span>
+                  <span data-bind="	text: title" class="title"
+                    >Intellect</span
+                  >
                 </li>
 
                 <li>
                   <span class="value"
                     >+<span data-bind="text: value">1</span></span
                   >
-                  <span data-bind="	text: title" class="title">Charisma</span>
+                  <span data-bind="	text: title" class="title"
+                    >Charisma</span
+                  >
                 </li>
 
                 <li>
                   <span class="value"
                     >+<span data-bind="text: value">1</span></span
                   >
-                  <span data-bind="	text: title" class="title">Strength</span>
+                  <span data-bind="	text: title" class="title"
+                    >Strength</span
+                  >
                 </li>
               </ul>
               <div
@@ -190,18 +231,27 @@
               </div>
             </div>
           </li>
-          <li class="skill" active data-skill-id="3" data-skill-points="0/2">
+          <li
+            class="skill"
+            active
+            data-skill-id="c"
+            data-skill-points="0/2"
+          >
             <div class="icon"></div>
             <div class="tool-tip">
               <h3 data-bind="text: title" class="skill-name">
                 Database Authoring
               </h3>
-              <div data-bind="html: description" class="skill-description">
-                Databases are powerful engines for storing, organizing, and
-                retrieving data. There is a wide variety of database platforms
-                to choose from. The most widely used database language is
-                Structured Query Language (SQL). Properly architecting your data
-                will facilitate your site’s server-side programming.
+              <div
+                data-bind="html: description"
+                class="skill-description"
+              >
+                Databases are powerful engines for storing,
+                organizing, and retrieving data. There is a wide
+                variety of database platforms to choose from. The most
+                widely used database language is Structured Query
+                Language (SQL). Properly architecting your data will
+                facilitate your site’s server-side programming.
               </div>
               <ul class="skill-links">
                 <!--ko foreach: links-->
@@ -265,7 +315,9 @@
                   <span class="value"
                     >+<span data-bind="text: value">3</span></span
                   >
-                  <span data-bind="	text: title" class="title">Strength</span>
+                  <span data-bind="	text: title" class="title"
+                    >Strength</span
+                  >
                 </li>
                 <!--/ko-->
               </ul>
@@ -278,19 +330,28 @@
               </div>
             </div>
           </li>
-          <li class="skill" active data-skill-id="4" data-skill-points="0/2">
+          <li
+            class="skill"
+            active
+            data-skill-id="d"
+            data-skill-points="0/2"
+          >
             <div class="icon"></div>
             <div class="tool-tip">
               <h3 data-bind="text: title" class="skill-name">
                 Server Administration
               </h3>
-              <div data-bind="html: description" class="skill-description">
-                Even the simplest web applications will require a server to run
-                them. There are several popular and fully-featured web servers
-                to choose from, though your application's server-side
-                programming language may limit your options. Learning to manage
-                and configure your web server will help you keep your site up
-                and running smoothly.
+              <div
+                data-bind="html: description"
+                class="skill-description"
+              >
+                Even the simplest web applications will require a
+                server to run them. There are several popular and
+                fully-featured web servers to choose from, though your
+                application's server-side programming language may
+                limit your options. Learning to manage and configure
+                your web server will help you keep your site up and
+                running smoothly.
               </div>
               <ul class="skill-links">
                 <!--ko foreach: links-->
@@ -332,8 +393,8 @@
               >
                 Next rank:
                 <span data-bind="	text: nextRankDescription"
-                  >You are capable of setting up your application in a new
-                  environment.</span
+                  >You are capable of setting up your application in a
+                  new environment.</span
                 >
               </div>
               <hr />
@@ -343,13 +404,18 @@
                   <span class="value"
                     >+<span data-bind="text: value">3</span></span
                   >
-                  <span data-bind="	text: title" class="title">Fortitude</span>
+                  <span data-bind="	text: title" class="title"
+                    >Fortitude</span
+                  >
                 </li>
                 <!--/ko-->
               </ul>
               <!--ko if: talentSummary-->
               <div class="talent-summary">
-                Grants <span data-bind="text: talentSummary">Stewardship</span>
+                Grants
+                <span data-bind="text: talentSummary"
+                  >Stewardship</span
+                >
               </div>
               <!--/ko-->
               <div
@@ -364,28 +430,60 @@
       </li>
       <li class="tier">
         <ul>
-          <li class="skill" data-skill-id="1.1" data-skill-points="0/2">
+          <li
+            class="skill"
+            data-skill-id="a_a"
+            data-skill-points="0/2"
+          >
             <div class="icon"></div>
           </li>
-          <li class="skill" data-skill-id="1.2" data-skill-points="0/2">
+          <li
+            class="skill"
+            data-skill-id="a_b"
+            data-skill-points="0/2"
+          >
             <div class="icon"></div>
           </li>
-          <li class="skill" data-skill-id="2.1" data-skill-points="0/2">
+          <li
+            class="skill"
+            data-skill-id="b_a"
+            data-skill-points="0/2"
+          >
             <div class="icon"></div>
           </li>
-          <li class="skill" data-skill-id="2.2" data-skill-points="0/2">
+          <li
+            class="skill"
+            data-skill-id="b_b"
+            data-skill-points="0/2"
+          >
             <div class="icon"></div>
           </li>
-          <li class="skill" data-skill-id="2.3" data-skill-points="0/2">
+          <li
+            class="skill"
+            data-skill-id="b_c"
+            data-skill-points="0/2"
+          >
             <div class="icon"></div>
           </li>
-          <li class="skill" data-skill-id="2.4" data-skill-points="0/1">
+          <li
+            class="skill"
+            data-skill-id="b_d"
+            data-skill-points="0/1"
+          >
             <div class="icon"></div>
           </li>
-          <li class="skill" data-skill-id="3.1" data-skill-points="0/2">
+          <li
+            class="skill"
+            data-skill-id="c_a"
+            data-skill-points="0/2"
+          >
             <div class="icon"></div>
           </li>
-          <li class="skill" data-skill-id="4.1" data-skill-points="0/2">
+          <li
+            class="skill"
+            data-skill-id="d_a"
+            data-skill-points="0/2"
+          >
             <div class="icon"></div>
           </li>
         </ul>
