@@ -6,9 +6,12 @@
   );
   controls.classList.add("controls");
   controls.innerHTML = `
+    <span class="numbertext"></span>
+    
     <a class="prev">&#10094;</a>
     <a class="next">&#10095;</a>
 
+    <h5 class="text"></h5>
     <ul class="dots"></ul>
   `;
   slides.forEach(() =>
@@ -26,14 +29,23 @@
   const showSlides = (n) => {
     if (n > slides.length) slideIndex = 1;
     if (n < 1) slideIndex = slides.length;
+
+    controls.querySelector(".text").textContent = slides[
+      slideIndex - 1
+    ].querySelector("img").alt;
+    controls.querySelector(
+      ".numbertext"
+    ).textContent = `${slideIndex}/${slides.length}`;
     slides.forEach(
       (slide, i) =>
         (slide.style.display = i === slideIndex - 1 ? "flex" : "")
     );
-    dots.forEach(
-      (dot, i) =>
-        (dot.style.color = i === slideIndex - 1 ? "#717171" : "")
-    );
+    dots.forEach((dot, i) => {
+      const activeClassName = "active";
+      if (i === slideIndex - 1)
+        return dot.classList.add(activeClassName);
+      dot.classList.remove(activeClassName);
+    });
   };
 
   controls
