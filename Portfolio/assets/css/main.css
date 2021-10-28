@@ -15,8 +15,7 @@
   --color-dark: rgba(255, 255, 255, 0.025);
 
   /* typography */
-  --ff-shs: "Source Sans Pro", Helvetica,
-    sans-serif;
+  --ff-shs: "Source Sans Pro", Helvetica, sans-serif;
   --ff-pms: "Poppins", Helvetica, sans-serif;
   --ff-ss: "Six Caps", sans-serif;
 
@@ -26,11 +25,9 @@
   --fw-bolder: 700;
 
   /* Layout */
-  --col-max-width: 150rem;
+  --max-width: 150rem;
   --tilt-angle: 5rem;
-  --tilt-angle-negative: calc(
-    0px - var(--tilt-angle)
-  );
+  --tilt-angle-negative: calc(0px - var(--tilt-angle));
 }
 
 ::-webkit-scrollbar {
@@ -169,13 +166,11 @@ section > article,
 .footer__content {
   position: relative;
   width: 100%;
-  max-width: var(--col-max-width);
+  max-width: var(--max-width);
   background-repeat: no-repeat;
   background-position: top;
-  background-size: 100%
-    calc(100% - var(--tilt-angle));
-  padding: calc(var(--tilt-angle) * 2)
-    var(--tilt-angle);
+  background-size: 100% calc(100% - var(--tilt-angle));
+  padding: calc(var(--tilt-angle) * 2) var(--tilt-angle);
 }
 
 aside {
@@ -367,9 +362,7 @@ aside {
   z-index: 0;
   position: relative;
   padding: 10vh 0;
-  margin-top: calc(
-    var(--tilt-angle-negative) - 1px
-  );
+  margin-top: calc(var(--tilt-angle-negative) - 1px);
   clip-path: polygon(
     0 var(--tilt-angle),
     100% 0,
@@ -404,7 +397,7 @@ aside {
   z-index: 0;
   position: relative;
   width: calc(100% - 50rem);
-  max-width: calc(var(--col-max-width) - 50rem);
+  max-width: calc(var(--max-width) - 50rem);
   background-color: var(--color-mid);
   box-shadow: 0 0 0.5em 0 #000;
   border-radius: 1rem;
@@ -433,9 +426,7 @@ aside {
   font-size: 4rem;
   color: var(--color-primary);
   background-color: var(--color-accent);
-  margin-top: calc(
-    var(--tilt-angle-negative) - 1px
-  );
+  margin-top: calc(var(--tilt-angle-negative) - 1px);
   padding-top: 3rem;
   clip-path: polygon(
     0 0,
@@ -500,9 +491,7 @@ aside {
   -webkit-text-stroke: 0.1rem #fff;
   text-shadow: 0 0 0 var(--color-light);
   transform: translate(10%, 150%);
-  filter: drop-shadow(
-    1rem 1rem 0 var(--color-mid)
-  );
+  filter: drop-shadow(1rem 1rem 0 var(--color-mid));
 }
 
 .about-me__sub-title span {
@@ -526,19 +515,21 @@ aside {
 
 .about-me__image {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   position: sticky;
   top: 0;
   left: 50%;
   width: 50%;
-  padding: 0 3rem;
+  padding-left: 3rem;
 }
 
 .about-me__image img {
-  max-height: calc(100vh - 12rem);
+  height: calc(100vh - 12rem);
   margin: auto 0;
   margin-top: 10rem;
   border-radius: 0.5rem;
+  object-fit: contain;
+  object-position: top;
 }
 
 .portfolio {
@@ -547,9 +538,7 @@ aside {
     var(--color-accent__dark),
     transparent
   );
-  margin-top: calc(
-    var(--tilt-angle-negative) - 1px
-  );
+  margin-top: calc(var(--tilt-angle-negative) - 1px);
   clip-path: polygon(
     0 var(--tilt-angle),
     100% 0,
@@ -658,15 +647,8 @@ aside {
 
 .skills {
   background-color: var(--color-accent__dark);
-  margin-top: calc(
-    var(--tilt-angle-negative) - 1px
-  );
-  clip-path: polygon(
-    0 0,
-    100% var(--tilt-angle),
-    100% 100%,
-    0 100%
-  );
+  margin-top: calc(var(--tilt-angle-negative) - 1px);
+  clip-path: polygon(0 0, 100% var(--tilt-angle), 100% 100%, 0 100%);
 }
 
 .skills__title {
@@ -697,19 +679,9 @@ aside {
 
 .footer {
   background-color: var(--color-primary);
-  background-image: linear-gradient(
-    var(--color-light),
-    transparent
-  );
-  margin-top: calc(
-    var(--tilt-angle-negative) - 1px
-  );
-  clip-path: polygon(
-    0 var(--tilt-angle),
-    100% 0,
-    100% 100%,
-    0 100%
-  );
+  background-image: linear-gradient(var(--color-light), transparent);
+  margin-top: calc(var(--tilt-angle-negative) - 1px);
+  clip-path: polygon(0 var(--tilt-angle), 100% 0, 100% 100%, 0 100%);
 }
 
 .footer__content {
@@ -828,6 +800,7 @@ aside {
   .about-me__text,
   .about-me__image,
   .footer__content > * {
+    justify-content: center;
     min-width: 100%;
   }
 
@@ -862,9 +835,7 @@ aside {
   .hamburger:focus {
     text-decoration: underline;
     fill: rgba(255, 255, 255, 0.75);
-    filter: drop-shadow(
-        0 0 0.5rem var(--color-accent)
-      )
+    filter: drop-shadow(0 0 0.5rem var(--color-accent))
       drop-shadow(0 0 0.5rem var(--color-accent));
   }
 

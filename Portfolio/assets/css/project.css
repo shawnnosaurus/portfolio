@@ -8,16 +8,24 @@ body {
 
 ul {
   list-style: none;
+  max-width: var(--max-width);
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 h1,
 h2,
-h3 {
-  margin: 2rem 0;
+h3,
+h4,
+h5 {
+  width: var(--max-width);
+  max-width: 100%;
+  margin: 2rem auto;
 }
 
 p {
-  margin: 0.5rem 0;
+  max-width: var(--max-width);
+  margin: 0.5rem auto;
 }
 
 P + P {
@@ -25,12 +33,13 @@ P + P {
 }
 
 .callout {
-  width: 100%;
+  width: var(--max-width);
+  max-width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-left: 0.5em solid currentColor;
   border-radius: 0.25em;
   padding: 1em;
-  margin: 1em 0;
+  margin: 1em auto;
 }
 
 .callout--error {
@@ -84,6 +93,7 @@ P + P {
   justify-content: center;
   margin: 0.5em;
 }
+
 .carousel .controls .dots li {
   cursor: pointer;
   height: 1.25em;
@@ -92,14 +102,14 @@ P + P {
   color: currentColor;
   background-color: currentColor;
   border-radius: 50%;
-  border: solid 1px rgba(50, 50, 50, 0.5);
+  border: solid 1px rgba(0, 0, 0, 0.3);
   display: inline-block;
   transition: color 500ms ease;
 }
 
 .carousel .controls .dots li.active,
 .carousel .controls .dots li:hover {
-  color: var(--color-mid);
+  color: var(--color-accent);
 }
 
 .carousel .slides {
@@ -151,13 +161,15 @@ P + P {
 .carousel .prev:hover,
 .carousel .next:hover {
   color: #fff;
-  background-color: var(--color-mid);
+  background-color: var(--color-accent);
+  opacity: 0.75;
 }
 
 .carousel .text,
 .carousel .numbertext {
   color: currentColor;
   font-size: 3rem;
+  letter-spacing: 1px;
   font-weight: 900;
   text-shadow: var(--color-mid) 0 0 1px, var(--color-mid) 0 0 1px,
     var(--color-mid) 0 0 1px;
@@ -167,6 +179,10 @@ P + P {
   top: 0;
   left: 0;
   text-align: center;
+}
+
+.carousel .text {
+  color: var(--color-accent);
 }
 
 .carousel .text {
