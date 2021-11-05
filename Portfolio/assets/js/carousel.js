@@ -1,61 +1,149 @@
-(function () {
-  const carousel = document.querySelector(".carousel");
-  const slides = carousel.querySelectorAll(".slides li");
-  const controls = carousel.appendChild(
-    document.createElement("div")
-  );
-  controls.classList.add("controls");
-  controls.innerHTML = `
-    <span class="numbertext"></span>
-    
-    <a class="prev">&#10094;</a>
-    <a class="next">&#10095;</a>
+new (class {
+  _slideIndex = 1;
+  get slideIndex() {
+    return this._slideIndex;
+  }
 
-    <h5 class="text"></h5>
-    <ul class="dots"></ul>
-  `;
-  slides.forEach(() =>
-    carousel
-      .querySelector(".dots")
-      .appendChild(document.createElement("li"))
-  );
-  const dots = carousel.querySelectorAll(".dots li");
+  set slideIndex(v) {
+    this._slideIndex = v || this._slideIndex;
 
-  let slideIndex = 1;
+    if (v > this.slides.length) this._slideIndex = 1;
+    if (v < 1) this._slideIndex = this.slides.length;
+  }
 
-  const plusSlides = (n) => showSlides((slideIndex += n));
-  const setCurrentSlide = (n) => showSlides((slideIndex = n));
+  get document() {
+    return this.global.document;
+  }
 
-  const showSlides = (n) => {
-    if (n > slides.length) slideIndex = 1;
-    if (n < 1) slideIndex = slides.length;
+  get carousel() {
+    return this.document.querySelector(".carousel");
+  }
 
-    controls.querySelector(".text").textContent = slides[
-      slideIndex - 1
-    ].querySelector("img").alt;
-    controls.querySelector(
-      ".numbertext"
-    ).textContent = `${slideIndex}/${slides.length}`;
-    slides.forEach(
-      (slide, i) =>
-        (slide.style.display = i === slideIndex - 1 ? "flex" : "")
-    );
-    dots.forEach((dot, i) => {
-      const activeClassName = "active";
-      if (i === slideIndex - 1)
-        return dot.classList.add(activeClassName);
-      dot.classList.remove(activeClassName);
-    });
+  get slides() {
+    return this.carousel.querySelectorAll(".slides li");
+  }
+
+  get controls() {
+    let rtnControls = this.document.querySelector(".controls");
+
+    if (!rtnControls?.querySelector(".dots")) {
+      rtnControls = this.carousel.appendChild(
+        this.document.createElement("div")
+      );
+      rtnControls.classList.add("controls");
+      rtnControls.innerHTML = `
+        <span class="numbertext"></span>
+        
+        <a tabindex="0" class="prev">&#10094;</a>
+        <a tabindex="0" class="next">&#10095;</a>
+
+        <h5 class="text"></h5>
+        <ul class="dots"></ul>
+      `;
+    }
+
+    return rtnControls;
+  }
+
+  createDot = () => {
+    const dot = this.document.createElement("li");
+    dot.tabIndex = 0;
+    return dot;
   };
 
-  controls
-    .querySelector(".prev")
-    .addEventListener("click", () => plusSlides(-1));
-  controls
-    .querySelector(".next")
-    .addEventListener("click", () => plusSlides(+1));
-  dots.forEach((dot, i) =>
-    dot.addEventListener("click", () => setCurrentSlide(i + 1))
-  );
-  showSlides(slideIndex);
-})();
+  get dots() {
+    let rtnDots = this.controls.querySelectorAll(".dots li");
+
+    if (!rtnDots || rtnDots.length === 0) {
+      rtnDots = [...this.slides].map(() =>
+        this.controls
+          .querySelector(".dots")
+          .appendChild(this.createDot())
+      );
+    }
+
+    return rtnDots;
+  }
+
+  get currentSlide() {
+    return this.slides[this.slideIndex - 1];
+  }
+
+  constructor(global) {
+    this.global = global;
+    this.init();
+  }
+
+  init() {
+    this.addEventListeners();
+    this.showSlide();
+  }
+
+  addEventListeners() {
+    this.controls
+      .querySelector(".prev")
+      .addEventListener("click", () => this.plusSlides(-1));
+
+    this.controls
+      .querySelector(".next")
+      .addEventListener("click", () => this.plusSlides(+1));
+
+    this.dots.forEach((dot, i) =>
+      dot.addEventListener("click", () => this.setCurrentSlide(i + 1))
+    );
+
+    this.global.addEventListener("keydown", (event) => {
+      switch (event.key.toUpperCase()) {
+        case "ENTER":
+          event.target.click();
+          break;
+        case "ARROWRIGHT":
+          this.plusSlides(1);
+          break;
+        case "ARROWLEFT":
+          this.plusSlides(-1);
+          break;
+        default:
+          return;
+      }
+    });
+  }
+
+  plusSlides = (n) => this.showSlide((this.slideIndex += n));
+
+  setCurrentSlide = (n) => this.showSlide((this.slideIndex = n));
+
+  showSlide = (n) => {
+    this.slideIndex = n;
+
+    this.setActiveImage();
+    this.setSlideCount();
+    this.setDescription();
+    this.setActiveDot();
+  };
+
+  setActiveImage = () =>
+    this.slides.forEach(
+      (slide) =>
+        (slide.style.display =
+          slide === this.currentSlide ? "flex" : "")
+    );
+
+  setSlideCount = () =>
+    (this.controls.querySelector(
+      ".numbertext"
+    ).textContent = `${this.slideIndex}/${this.slides.length}`);
+
+  setDescription = () =>
+    (this.controls.querySelector(
+      ".text"
+    ).textContent = this.currentSlide.querySelector("img").alt);
+
+  setActiveDot = () =>
+    this.dots.forEach((dot, i) => {
+      if (i === this.slideIndex - 1)
+        return dot.classList.add("active");
+
+      dot.classList.remove("active");
+    });
+})(window);
