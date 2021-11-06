@@ -7,6 +7,7 @@ body {
 }
 
 ul {
+  width: 100%;
   list-style: none;
   max-width: var(--max-width);
   margin-left: auto !important;
@@ -120,13 +121,15 @@ P + P {
 }
 
 .carousel .slides li {
-  display: none;
+  position: absolute;
   text-align: center;
-  opacity: 0.75;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-  animation-name: fade;
-  animation-duration: 1s;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.carousel .slides li.selected {
+  position: relative;
+  opacity: 1;
 }
 
 .carousel img {
@@ -188,22 +191,4 @@ P + P {
 
 .carousel .text {
   width: 100%;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 0.75;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 0.75;
-  }
 }

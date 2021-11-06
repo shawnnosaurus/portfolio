@@ -122,12 +122,11 @@ new (class {
     this.setActiveDot();
   };
 
-  setActiveImage = () =>
-    this.slides.forEach(
-      (slide) =>
-        (slide.style.display =
-          slide === this.currentSlide ? "flex" : "")
-    );
+  setActiveImage = () => {
+    const selectedSlide = this.carousel.querySelector(".selected");
+    if (selectedSlide) selectedSlide.classList.remove("selected");
+    this.currentSlide.classList.add("selected");
+  };
 
   setSlideCount = () =>
     (this.controls.querySelector(
