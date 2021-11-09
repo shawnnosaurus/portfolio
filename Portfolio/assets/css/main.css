@@ -551,6 +551,7 @@ aside {
   text-align: center;
   flex-wrap: wrap;
   margin: 0 auto;
+  gap: 2rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
@@ -558,6 +559,7 @@ aside {
 .portfolio__item {
   position: relative;
   display: flex;
+  outline: solid 1px var(--color-light);
 }
 
 .portfolio .featured {
@@ -572,7 +574,9 @@ aside {
 }
 
 .portfolio__link {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   width: 100%;
   overflow: hidden;
   cursor: pointer;
@@ -586,11 +590,13 @@ aside {
   transition: transform 1s;
 }
 
-.portfolio__item:hover .portfolio__image {
+.portfolio__item:hover .portfolio__image,
+.portfolio__item:focus .portfolio__image {
   transform: scale(1.1);
 }
 
-.portfolio__link figcaption {
+.portfolio__item figcaption {
+  display: none;
   font-size: 1.75em;
   position: absolute;
   bottom: 0;
@@ -605,8 +611,8 @@ aside {
   transition: opacity 300ms, backdrop-filter 300ms;
 }
 
-.portfolio__link:hover figcaption,
-.portfolio__link:focus figcaption {
+.portfolio__item:hover figcaption,
+.portfolio__item:focus figcaption {
   opacity: 1;
   backdrop-filter: blur(5px);
 }
@@ -624,7 +630,7 @@ aside {
   font-family: var(--ff-ss);
   font-weight: var(--fw-normal);
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.05em;
   padding-top: 0.1em;
 }
 
@@ -675,13 +681,6 @@ aside {
   overflow: hidden;
   width: 100%;
   height: 100vh;
-}
-
-.footer {
-  background-color: var(--color-primary);
-  background-image: linear-gradient(var(--color-light), transparent);
-  margin-top: calc(var(--tilt-angle-negative) - 1px);
-  clip-path: polygon(0 var(--tilt-angle), 100% 0, 100% 100%, 0 100%);
 }
 
 .footer__content {
@@ -781,7 +780,6 @@ aside {
 .copyright {
   width: 100%;
   padding: 1.5rem 3rem;
-  background-color: var(--color-primary);
   font-size: 3rem;
   color: var(--color-light);
 }
@@ -941,13 +939,8 @@ aside {
     transform: translate(-50%, -0.2em);
   }
 
-  .portfolio__link figcaption {
+  .portfolio__item {
     max-height: 75vh;
-    opacity: 1;
-    backdrop-filter: blur(5px);
-    color: rgba(255, 255, 255, 0.75);
-    text-shadow: 0 0 1 rem var(--color-accent),
-      0 0 1 rem var(--color-accent);
   }
 
   .portfolio__title {
