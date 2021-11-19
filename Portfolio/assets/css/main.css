@@ -244,7 +244,7 @@ aside {
     0 100%
   );
   background-color: var(--color-primary);
-  background: url("https://images.unsplash.com/photo-1432821579285-1b649e5b1ce3?fit=crop&h=400&w=400");
+  background-image: url("../../assets/img/hero.webp");
   background-position: center top;
   background-size: cover;
   height: calc(100vh + var(--tilt-angle));
@@ -434,7 +434,7 @@ aside {
     100% calc(100% - var(--tilt-angle)),
     0 100%
   );
-  background-image: url("./assets/img/tie_fighter.webp");
+  background-image: url("../../assets/img/tie_fighter.webp");
   background-repeat: no-repeat;
   background-size: 30rem;
   background-position: top right;
