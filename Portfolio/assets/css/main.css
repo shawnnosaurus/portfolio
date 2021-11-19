@@ -434,7 +434,7 @@ aside {
     100% calc(100% - var(--tilt-angle)),
     0 100%
   );
-  background-image: url("https://images.saymedia-content.com/.image/t_share/MTc0NDYxMTQ2NjMwNjYxNDgw/best-tie-fighters-star-wars.png");
+  background-image: url("./assets/img/tie_fighter.webp");
   background-repeat: no-repeat;
   background-size: 30rem;
   background-position: top right;
@@ -524,7 +524,7 @@ aside {
 }
 
 .about-me__image img {
-  height: calc(100vh - 12rem);
+  max-height: calc(100vh - 12rem);
   margin: auto 0;
   margin-top: 10rem;
   border-radius: 0.5rem;
@@ -560,6 +560,12 @@ aside {
   position: relative;
   display: flex;
   outline: solid 1px var(--color-light);
+}
+
+.portfolio__item picture {
+  display: flex;
+  height: 100%;
+  width: 100%;
 }
 
 .portfolio .featured {

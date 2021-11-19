@@ -6,25 +6,25 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <meta itemprop="image" content="./assets/img/portfolio_hero.jpg" />
+  <meta itemprop="image" content="./assets/img/portfolio_hero.webp" />
   <meta name="description" content="I'm a fullstack designer and developer, dabbling in architectural design, specialising in the frontend.">
 
   <meta name="twitter:site" content="./index.html" />
-  <meta name="twitter:image" content="./assets/img/portfolio_hero.jpg" />
+  <meta name="twitter:image" content="./assets/img/portfolio_hero.webp" />
   <meta name="twitter:title" content="Shawn Genlloud's Portfolio" />
   <meta name="twitter:description" content="I'm a fullstack designer and developer, dabbling in architectural design, specialising in the frontend." />
   <meta name="twitter:card" content="shawn_genlloud_portfolio" />
 
   <meta property="og:url" content="./index.html" />
-  <meta property="og:image" content="./assets/img/portfolio_hero.jpg" />
+  <meta property="og:image" content="./assets/img/portfolio_hero.webp" />
   <meta property="og:title" content="Shawn Genlloud's Portfolio" />
   <meta property="og:description" content="I'm a fullstack designer and developer, dabbling in architectural design, specialising in the frontend." />
 
   <meta name="apple-mobile-web-app-capable" content="no" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <link rel="apple-touch-icon" href="./assets/img/icon.png" />
-  <link rel="shortcut icon" href="./assets/img/icon.png" />
+  <link rel="apple-touch-icon" href="./assets/img/icon.webp" />
+  <link rel="shortcut icon" href="./assets/img/icon.webp" />
 
   <title>Shawn Genlloud's Portfolio</title>
 
@@ -96,8 +96,11 @@
         <div class="about-me__image">
           <div class="about-me__image--center">
             <h3 class="about-me__sub-title">Developer<br /><span>&amp;</span>&nbsp;Designer</h3>
-            <img src="./assets/img/puzzles.jpg"
-              alt="A picture of Shawn Genlloud's Star Wars puzzle" />
+            <picture>
+              <source srcset="./assets/img/puzzles.webp" type="image/webp">
+              <img src="./assets/img/puzzles.jpg"
+                alt="A picture of Shawn Genlloud's Star Wars puzzle" />
+            </picture>
           </div>
         </div>
       </article>
@@ -125,9 +128,12 @@
           <!-- Portfolio Credit Approval Processing System -->
           <figure class="portfolio__item">
             <a href="./projects/caps.html" target="_blank" class="portfolio__link">
-              <img class="portfolio__image"
-                src="./assets/img/caps/dashboard.jpg"
-                alt="Credit Approval Processing System" />
+              <picture>
+                <source srcset="./assets/img/bank_dashboard.webp" type="image/webp">
+                <img class="portfolio__image"
+                  src="./assets/img/bank_dashboard.jpg"
+                  alt="Credit Approval Processing System" />
+              </picture>
               <figcaption>
                 <h3 class="portfolio__title">Credit Approval & Processing System</h3>
                 <p class="portfolio__desc">Credit application and auditing project.</p>
@@ -139,9 +145,12 @@
           <!-- Portfolio Telecommunication Suit -->
           <figure class="portfolio__item">
             <a href="./projects/telecomms.html" target="_blank" class="portfolio__link">
-              <img class="portfolio__image"
-                src="./assets/img/telecomms/call_tracking.jpg"
-                alt="Telecommunication Suit">
+              <picture>
+                <source srcset="./assets/img/telecomms_dashboard.webp" type="image/webp">
+                <img class="portfolio__image"
+                  src="./assets/img/telecomms_dashboard.jpg"
+                  alt="Telecommunication Suit">
+              </picture>
               <figcaption>
                 <h3 class="portfolio__title">Telecommunications Suit</h3>
                 <p class="portfolio__desc">A short description could go right here</p>
@@ -153,9 +162,12 @@
           <!-- Portfolio Portfolio Site -->
           <figure class="portfolio__item">
             <a href="./projects/portfolio.html" target="_blank" class="portfolio__link">
-              <img class="portfolio__image"
-                src="./assets/img/portfolio_hero.jpg"
-                alt="My Portfolio Site" />
+              <picture>
+                <source srcset="./assets/img/portfolio_hero.webp" type="image/webp">
+                <img class="portfolio__image"
+                  src="./assets/img/portfolio_hero.jpg"
+                  alt="My Portfolio Site" />
+              </picture>
               <figcaption>
                 <h3 class="portfolio__title">Portfolio Site</h3>
                 <p class="portfolio__desc">All about this very site you're reading now.</p>
@@ -167,9 +179,12 @@
           <!-- Portfolio Miscellaneous -->
           <figure class="portfolio__item">
             <a href="./projects/misc.html" target="_blank" class="portfolio__link">
-              <img class="portfolio__image"
-                src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?fit=crop&h=400&w=400"
-                alt="portfolio item" />
+              <picture>
+                <source srcset="./assets/img/git_history.webp" type="image/webp">
+                <img class="portfolio__image"
+                  src="./assets/img/git_history.jpg"
+                  alt="portfolio item" />
+              </picture>
               <figcaption>
                 <h3 class="portfolio__title">Miscellaneous</h3>
                 <p class="portfolio__desc">A hodgepodge alphabet soup of old randoms.</p>

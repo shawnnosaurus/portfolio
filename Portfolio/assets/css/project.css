@@ -135,6 +135,7 @@ P + P {
 .carousel img {
   max-height: 95vh;
   vertical-align: middle;
+  opacity: 0.75;
 }
 
 .carousel .prev,
