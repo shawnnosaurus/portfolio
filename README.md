@@ -4,5 +4,5 @@
 <p align="center">Live Preview: <a href="https://shawngenlloud.com" target="_blank">Portfolio Website</a></p>
 
 <p align="center">
-<img src="./Portfolio/assets/img/portfolio_screenshot.jpg" width="550" alt="Portfolio Website">
+<img src="./Portfolio/assets/img/portfolio_hero.jpg" width="550" alt="Portfolio Website">
 </p>

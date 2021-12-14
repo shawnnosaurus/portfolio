@@ -69,7 +69,7 @@
 html,
 body {
   scroll-behavior: smooth;
-  font-size: 1vmin;
+  font-size: min(1vmin, 7px);
   display: flex;
   flex-direction: column;
   align-items: center;
