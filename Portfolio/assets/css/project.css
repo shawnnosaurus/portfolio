@@ -2,8 +2,6 @@
 
 body {
   font-size: 3rem;
-  padding: 3rem;
-  align-items: flex-start;
 }
 
 ul {
@@ -24,13 +22,13 @@ h5 {
   margin: 2rem auto;
 }
 
-p {
+body>p {
   width: 100%;
   max-width: var(--max-width);
   margin: 0.5rem auto;
 }
 
-P + P {
+body>p+body>p {
   margin-top: 1.75rem;
 }
 
@@ -67,7 +65,7 @@ P + P {
   border-radius: 1rem;
   padding: 1.5rem;
   margin: 1rem;
-  background-color: var(--color-accent_dark);
+  background-color: var(--clr-accent__900);
 }
 
 .carousel {
@@ -111,7 +109,7 @@ P + P {
 
 .carousel .controls .dots li.active,
 .carousel .controls .dots li:hover {
-  color: var(--color-accent);
+  color: var(--clr-accent__500);
 }
 
 .carousel .slides {
@@ -153,8 +151,8 @@ P + P {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-  text-shadow: var(--color-mid) 0 0 1px, var(--color-mid) 0 0 1px,
-    var(--color-mid) 0 0 1px;
+  text-shadow: var(--clr-primary__400) 0 0 1px, var(--clr-primary__400) 0 0 1px,
+    var(--clr-primary__400) 0 0 1px;
 }
 
 .carousel .next {
@@ -166,7 +164,7 @@ P + P {
 .carousel .prev:hover,
 .carousel .next:hover {
   color: #fff;
-  background-color: var(--color-accent);
+  background-color: var(--clr-accent__500);
   opacity: 0.75;
 }
 
@@ -176,8 +174,8 @@ P + P {
   font-size: 3rem;
   letter-spacing: 1px;
   font-weight: 900;
-  text-shadow: var(--color-mid) 0 0 1px, var(--color-mid) 0 0 1px,
-    var(--color-mid) 0 0 1px;
+  text-shadow: var(--clr-primary__400) 0 0 1px, var(--clr-primary__400) 0 0 1px,
+    var(--clr-primary__400) 0 0 1px;
   padding: 0.5em;
   margin: 0;
   position: absolute;
@@ -187,7 +185,7 @@ P + P {
 }
 
 .carousel .text {
-  color: var(--color-accent);
+  color: var(--clr-accent__500);
 }
 
 .carousel .text {
