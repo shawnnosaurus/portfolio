@@ -2,6 +2,7 @@
 
 body {
   font-size: 3rem;
+  padding: 1.5rem 3rem;
 }
 
 ul {
@@ -30,6 +31,10 @@ body>p {
 
 body>p+body>p {
   margin-top: 1.75rem;
+}
+
+.copyright {
+  padding: 0 !important;
 }
 
 .callout {
