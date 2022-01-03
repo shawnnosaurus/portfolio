@@ -33,10 +33,6 @@ body>p+body>p {
   margin-top: 1.75rem;
 }
 
-.copyright {
-  padding: 0 !important;
-}
-
 .callout {
   width: var(--max-width);
   max-width: 100%;
@@ -195,4 +191,9 @@ body>p+body>p {
 
 .carousel .text {
   width: 100%;
+}
+
+.copyright {
+  padding: 0 !important;
+  margin-top: 10rem;
 }
