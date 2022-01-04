@@ -26,8 +26,8 @@
   <meta name="apple-mobile-web-app-capable" content="no" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-  <link rel="apple-touch-icon" href="https://shawngenlloud.com/assetsimg/icon.png" />
-  <link rel="shortcut icon" href="https://shawngenlloud.com/assetsimg/icon.png" />
+  <link rel="apple-touch-icon" href="https://shawngenlloud.com/assets/img/icon.png" />
+  <link rel="shortcut icon" href="https://shawngenlloud.com/assets/img/icon.png" />
 
   <title>Shawn Genlloud's Portfolio - Jackpots Project</title>
   <link rel="stylesheet" href="../assets/css/project.css?v=1.0.0" prefetch />
@@ -71,6 +71,7 @@
     <li>TeamCity</li>
     <li>TsLint</li>
     <li>TypeScript</li>
+    <li>X-State</li>
     <li>Yarn</li>
   </ul>
 
@@ -89,6 +90,16 @@
     top of it, without the games having to be adapted. This was
     mostly to drive traffick outside of peak gameplay times and push
     other game genres into the jackpot exclusive arena.
+  </p>
+
+  <p>
+    To achieve this, I took native web components, using the <a href="https://micro-frontends.org/">micro-frontends
+      architecture</a>. I created a simple dotnet MVC application, which served this within, in order to easily hijack
+    the routing and inject resources from the backend. The client components wrapped the game in an iframe, with
+    associated translations and currency formatting. Dependant upon the configuration and launch parameters, my server
+    code also injected a custom template file. These templates were able to be interpreted by the components, which then
+    got the jackpots via requests to a centralised API maintained by another team and rendered that as the expected
+    template theme.
   </p>
 
   <h3>Templates</h3>
