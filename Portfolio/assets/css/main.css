@@ -90,10 +90,6 @@ p {
   line-height: 1.25;
 }
 
-b {
-  color: var(--clr-primary__400);
-}
-
 a {
   color: var(--clr-accent__500);
   text-decoration: none !important;
@@ -477,6 +473,10 @@ aside {
 
 .about-me__text p:first-child {
   margin-top: 0;
+}
+
+.about-me__text b {
+  color: var(--clr-primary__400);
 }
 
 .about-me__sub-title {
