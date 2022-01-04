@@ -455,7 +455,6 @@ aside {
   width: 50%;
   margin-top: 0;
   margin: 0 auto;
-  margin-bottom: var(--tilt-angle);
 }
 
 .about-me__text a {
@@ -516,6 +515,7 @@ aside {
   display: flex;
   justify-content: flex-end;
   margin: 0 auto;
+  margin-top: calc(var(--tilt-angle) * 2.5);
   max-width: min(100%, 410px);
 }
 
