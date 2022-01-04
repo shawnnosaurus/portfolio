@@ -90,6 +90,10 @@ p {
   line-height: 1.25;
 }
 
+b {
+  color: var(--clr-primary__400);
+}
+
 a {
   color: var(--clr-accent__500);
   text-decoration: none !important;
@@ -455,6 +459,16 @@ aside {
   width: 50%;
   margin-top: 0;
   margin: 0 auto;
+  margin-bottom: var(--tilt-angle);
+}
+
+.about-me__text a {
+  color: #fff;
+}
+
+.about-me__text a:hover,
+.about-me__text a:focus {
+  text-decoration: underline !important;
 }
 
 .about-me__text p {
@@ -501,9 +515,8 @@ aside {
 .about-me__image {
   display: flex;
   justify-content: flex-end;
-  padding-left: 3rem;
-  margin: auto;
-  margin-top: 10rem;
+  margin: 0 auto;
+  max-width: min(100%, 410px);
 }
 
 .about-me__image img {
