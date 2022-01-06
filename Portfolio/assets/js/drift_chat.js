@@ -39,13 +39,13 @@ new (class {
       this.driftt[method] = this.driftt.factory(method);
     });
 
-    this.driftt.load = this.load;
+    this.driftt.load = this.load.bind(this);
   }
 
   load() {
     const nims = 3e5;
     const timestamp = Math.ceil(new Date().getTime() / nims) * nims;
-    this.injectDriftt(timestamp).bind(this);
+    this.injectDriftt(timestamp);
   }
 
   injectDriftt(timestamp) {
