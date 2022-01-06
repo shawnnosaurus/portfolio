@@ -45,7 +45,7 @@ new (class {
   load() {
     const nims = 3e5;
     const timestamp = Math.ceil(new Date().getTime() / nims) * nims;
-    this.injectDriftt(timestamp);
+    this.injectDriftt(timestamp).bind(this);
   }
 
   injectDriftt(timestamp) {
