@@ -117,7 +117,6 @@ body>p+body>p {
   display: flex;
   flex-direction: row;
   margin: auto;
-  z-index: -1;
 }
 
 .carousel .slides li {
@@ -125,6 +124,7 @@ body>p+body>p {
   text-align: center;
   opacity: 0;
   transition: opacity 1s;
+  z-index: -1;
 }
 
 .carousel .slides li.selected {
