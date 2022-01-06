@@ -117,6 +117,7 @@ body>p+body>p {
   display: flex;
   flex-direction: row;
   margin: auto;
+  z-index: -1;
 }
 
 .carousel .slides li {
