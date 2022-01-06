@@ -1,58 +1,24 @@
-new (class {
-  version = '0.3.1';
-  methods = ['identify', 'config', 'track', 'reset', 'debug', 'show', 'ping', 'page', 'hide', 'off', 'on'];
+"use strict";
 
-  get driftt() {
-    return this.global.driftt = this.global.drift = this.global.driftt ?? [];
+!function () {
+  var t = window.driftt = window.drift = window.driftt || [];
+  if (!t.init) {
+    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+    t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+      t.factory = function (e) {
+        return function () {
+          var n = Array.prototype.slice.call(arguments);
+          return n.unshift(e), t.push(n), t;
+        };
+      }, t.methods.forEach(function (e) {
+        t[e] = t.factory(e);
+      }), t.load = function (t) {
+        var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+        var i = document.getElementsByTagName("script")[0];
+        i.parentNode.insertBefore(o, i);
+      };
   }
-
-  get settings() {
-    return {
-      id: 'gmpbtgvzs5ca',
-    };
-  }
-
-  constructor(global) {
-    this.global = global;
-
-    if (!this.driftt.init) this.init();
-
-    this.driftt.SNIPPET_VERSION = this.version;
-    this.driftt.load(this.settings.id);
-  }
-
-  init() {
-    if (this.driftt.invoked)
-      return void (global.console && console.error && console.error('this.drift snippet included twice.'));
-
-    this.driftt.bind(this);
-    this.driftt.invoked = true;
-    this.driftt.methods = this.methods;
-
-    this.driftt.factory = smg => function () {
-      const args = Array.prototype.slice.call(arguments);
-      return args.unshift(smg),
-        this.drift.push(args),
-        this.drift;
-    };
-
-    this.driftt.methods.forEach(method => {
-      this.driftt[method] = this.driftt.factory(method);
-    });
-
-    this.driftt.load = this.load;
-  }
-
-  load() {
-    const nims = 3e5;
-    const timestamp = Math.ceil(new Date().getTime() / nims) * nims;
-    this.injectDriftt(timestamp);
-  }
-
-  injectDriftt(timestamp) {
-    const drifttScript = this.document.createElement('script');
-    drifttScript.async = true;
-    drifttScript.src = `https://js.driftt.com/include/${timestamp}/${this.settings.id}.js`;
-    this.head.appendChild(drifttScript);
-  }
-})(window);
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('gmpbtgvzs5ca');
