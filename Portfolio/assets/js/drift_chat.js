@@ -26,7 +26,7 @@
     }
   }
 
-  //global.requestAnimationFrame(hidePlaceholder);
+  global.requestAnimationFrame(hidePlaceholder);
 
   var t = global.driftt = global.drift = global.driftt || [];
   if (!t.init) {
