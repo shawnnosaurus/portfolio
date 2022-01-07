@@ -1,26 +1,24 @@
 "use strict";
 
 !function (global) {
-  global.document.querySelector('main').innerHTML += `
-    <div 
-      id="drift-widget-placeholder" 
-      title="Loading chat..." 
-      aria-hidden="true" 
-      tabindex="-1" 
-      style="z-index:1;background:#5c6282;opacity:0.25;position:fixed;right:4vmin;bottom:4vmin;padding:15px;border-radius:50%"
-    >
-      <svg width="25" height="23" viewBox="0 0 25 23">
-        <path 
-          d="M24.516 9.953C24.516 4.453 19.04 0 12.258 0 5.476 0 0 4.452 0 9.953c0 3.318 1.986 6.24 5.05 8.053-.34 2.552-1.815 4.055-1.844 4.084-.14.14-.17.368-.113.567a.524.524 0 0 0 .482.312c2.95 0 5.335-1.93 6.612-3.206.652.086 1.362.142 2.07.142 6.783 0 12.26-4.452 12.26-9.953z" 
-          fill="#ffffff"
-        ></path>
-      </svg>
-    </div>
+  const placeholderDiv = global.document.createElement('div');
+  placeholderDiv.id = 'drift-widget-placeholder';
+  placeholderDiv.title = 'Loading chat...';
+  placeholderDiv.ariaHidden = true;
+  placeholderDiv.tabIndex = -1;
+  placeholderDiv.setAttribute('style', 'z-index:1;background:#5c6282;opacity:0.25;position:fixed;right:4vmin;bottom:4vmin;padding:15px;border-radius:50%');
+  placeholderDiv.innerHTML += `
+    <svg width="25" height="23" viewBox="0 0 25 23">
+      <path fill="#ffffff"
+        d="M24.516 9.953C24.516 4.453 19.04 0 12.258 0 5.476 0 0 4.452 0 9.953c0 3.318 1.986 6.24 5.05 8.053-.34 2.552-1.815 4.055-1.844 4.084-.14.14-.17.368-.113.567a.524.524 0 0 0 .482.312c2.95 0 5.335-1.93 6.612-3.206.652.086 1.362.142 2.07.142 6.783 0 12.26-4.452 12.26-9.953z" 
+      ></path>
+    </svg>
   `;
+  global.document.body.insertBefore(placeholderDiv, global.document.body.firstChild);
 
   const hidePlaceholder = () => {
     if (global.document.querySelector('#drift-frame-chat[aria-hidden]')) {
-      global.document.querySelector('#drift-widget-placeholder').remove();
+      placeholderDiv.remove();
     } else {
       global.requestAnimationFrame(hidePlaceholder);
     }
