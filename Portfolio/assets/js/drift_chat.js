@@ -3,11 +3,11 @@
 !function (global) {
   global.document.body.innerHTML += `
     <div 
-      class="drift-widget-placeholder" 
+      id="drift-widget-placeholder" 
       title="Loading chat..." 
       aria-hidden="true" 
       tabindex="-1" 
-      style="background:#5c6282;opacity:0.25;position:fixed;right:35px;bottom:35px;padding:15px;border-radius:50%"
+      style="background:#5c6282;opacity:0.25;position:fixed;right:6vmin;bottom:6vmin;padding:15px;border-radius:50%"
     >
       <svg width="25" height="23" viewBox="0 0 25 23">
         <path 
@@ -17,6 +17,14 @@
       </svg>
     </div>
   `;
+
+  const hidePlaceholder = () => {
+    if (global.document.querySelector('#drift-frame-chat[aria-hidden]'))
+      return global.document.querySelector('#drift-widget-placeholder').remove();
+    global.requestAnimationFrame(hidePlaceholder);
+  }
+
+  global.requestAnimationFrame(hidePlaceholder);
 
   var t = global.driftt = global.drift = global.driftt || [];
   if (!t.init) {
