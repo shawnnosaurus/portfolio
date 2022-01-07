@@ -1,7 +1,7 @@
 "use strict";
 
 !function (global) {
-  global.document.body.innerHTML += `
+  global.document.querySelector('main').innerHTML += `
     <div 
       id="drift-widget-placeholder" 
       title="Loading chat..." 
@@ -19,12 +19,14 @@
   `;
 
   const hidePlaceholder = () => {
-    if (global.document.querySelector('#drift-frame-chat[aria-hidden]'))
-      return global.document.querySelector('#drift-widget-placeholder').remove();
-    global.requestAnimationFrame(hidePlaceholder);
+    if (global.document.querySelector('#drift-frame-chat[aria-hidden]')) {
+      global.document.querySelector('#drift-widget-placeholder').remove();
+    } else {
+      global.requestAnimationFrame(hidePlaceholder);
+    }
   }
 
-  global.requestAnimationFrame(hidePlaceholder);
+  //global.requestAnimationFrame(hidePlaceholder);
 
   var t = global.driftt = global.drift = global.driftt || [];
   if (!t.init) {
