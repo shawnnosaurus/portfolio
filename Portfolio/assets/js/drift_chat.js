@@ -7,7 +7,7 @@
       title="Loading chat..." 
       aria-hidden="true" 
       tabindex="-1" 
-      style="background:#5c6282;opacity:0.25;position:fixed;right:6vmin;bottom:6vmin;padding:15px;border-radius:50%"
+      style="z-index:1;background:#5c6282;opacity:0.25;position:fixed;right:4vmin;bottom:4vmin;padding:15px;border-radius:50%"
     >
       <svg width="25" height="23" viewBox="0 0 25 23">
         <path 
