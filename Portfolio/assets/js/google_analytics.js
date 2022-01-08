@@ -1,9 +1,4 @@
 new (class {
-  trace = function () {
-    this.dataLayer.push(arguments);
-    return this.trace;
-  }.bind(this);
-
   get document() {
     return this.global.document;
   }
@@ -19,20 +14,30 @@ new (class {
   }
 
   get dataLayer() {
-    return this.global['dataLayer'] ??= [];
+    return this.global.dataLayer ??= [];
   }
 
+  /**
+   * Anonymous class, to control scoping.
+   *
+   * @param global {Window}
+   */
   constructor(global) {
     if (global.document.location.host !== 'shawngenlloud.com') return;
     this.global = global;
     this.injectGoogleTagManager();
-    this.global['gtag'] ??= this.trace('js', new Date())('config', this.settings.id);
+    this.global.gtag ??= this.trace('js', new Date())('config', this.settings.id);
   }
 
-  injectGoogleTagManager() {
+  injectGoogleTagManager = () => {
     const tagManagerScript = this.document.createElement('script');
     tagManagerScript.async = true;
     tagManagerScript.src = `https://www.googletagmanager.com/gtag/js?id=${this.settings.id}`;
     this.head.appendChild(tagManagerScript);
   }
+
+  trace = function () {
+    this.dataLayer.push(arguments);
+    return this.trace;
+  }.bind(this);
 })(window);

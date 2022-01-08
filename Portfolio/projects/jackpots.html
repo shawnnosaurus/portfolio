@@ -38,8 +38,8 @@
   <h5>
     <a href="../index.html">Shawn Genlloud's Portfolio</a>
   </h5>
-  <h1>Jackpots Product</h1>
 
+  <h1>Jackpots Product</h1>
   <div class="callout callout--error">
     <h4>Warning!</h4>
     <p>
@@ -51,16 +51,20 @@
   <ul class="tags">
     <li>.NET Core</li>
     <li>ASP.NET MVC</li>
+    <li>Azure Boards</li>
     <li>Azure DevOps</li>
+    <li>Azure Repos</li>
     <li>C#</li>
     <li>CSS-in-JS</li>
     <li>CSS3</li>
+    <li>Confluence</li>
     <li>Custom Elements</li>
     <li>Custom Events</li>
     <li>GitLab</li>
     <li>HTML5</li>
     <li>JavaScript</li>
     <li>Jest</li>
+    <li>Jira</li>
     <li>Node JS</li>
     <li>NPM</li>
     <li>NUnit</li>
@@ -73,6 +77,7 @@
     <li>TsLint</li>
     <li>TypeScript</li>
     <li>X-State</li>
+    <li>XUnit</li>
     <li>Yarn</li>
   </ul>
 
@@ -80,8 +85,8 @@
   <p>
     I was picked as part of a task team, to develop a solution
     within 6 weeks, that could wrap any game and turn it into a
-    jackpots game. From there I became the lone product owner I
-    managed everything, from sourcing business requirements, through
+    jackpots game. From there I became the lone product owner,
+    managing everything from sourcing business requirements, through
     the entire product life cycle.
   </p>
 
@@ -89,10 +94,9 @@
   <p>
     This solution was created to wrap any game and run jackpots on
     top of it, without the games having to be adapted. This was
-    mostly to drive traffick outside of peak gameplay times and push
+    mostly to drive traffic outside of peak gameplay times and push
     other game genres into the jackpot exclusive arena.
   </p>
-
   <p>
     To achieve this, I took native web components, using the <a href="https://micro-frontends.org/">micro-frontends
       architecture</a>. I created a simple dotnet MVC application, which served this within, in order to easily hijack
@@ -107,7 +111,7 @@
 
   <h3>Templates</h3>
   <p>
-    I created a web component driven templating system, that hooks
+    I created a web component driven templating system that hooks
     into custom events, in order to customise the vistual aspect of
     the jackpots.
   </p>
@@ -122,8 +126,8 @@
 
   <h3>Test Harness</h3>
   <p>
-    In order for designers to customise their unique template. I
-    developed a test harness, that runs the jackpots client outside
+    In order for designers to customise their unique template, I
+    developed a test harness. Which runs the jackpots client outside
     of the context of the main system. This was eventually used as
     the visualisation of the config system, to easily edit the
     templates from an external application.
@@ -133,7 +137,30 @@
   <p>
     In order to have complete trust in the system and templates, I
     created an automation solution, for end to end testing
-    regression.
+    regression. I also created some tooling to aid QA, one of which
+    being a public facing<a
+      href="https://chrome.google.com/webstore/detail/stringosaurus/nkpklhkajcfpgkpciklldidgdndbhcfd">
+      Chrome extension</a>, to help update/create/delete querystring parameters.
+  </p>
+
+  <h3>DevOps Pipeline</h3>
+  <p>
+    Along with automation, I've included a fully custom build and deployments
+    pipeline. With every merge/commit to the Master branch, the build runs
+    both the client and server side tests, that I wrote with coverage reports
+    for both. Once all tests have passed, the deployment of this NuGet package
+    can be created. This pipeline has been built with safeguards between each
+    deployment to the dev, testing, staging and finally production environments.
+  </p>
+
+  <h3>Quality & Documentation</h3>
+  <p>
+    To keep documentation and code comments from rotting over time, I placed
+    within the build pipeline, scripts that run auto-docs to easily be
+    consumed by less technical audiences. My manual documentation tends to be
+    rather thorough, while maintaining layman's terminology. Albeit that I
+    have admittedly gotten rusty on my XML skills, I try give single glance and
+    to the point consumption of the information being portrayed.
   </p>
 
   <footer aria-hidden="true">

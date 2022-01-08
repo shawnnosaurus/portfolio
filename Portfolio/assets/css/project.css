@@ -196,5 +196,6 @@ body>p+body>p {
 
 .copyright {
   padding: 0 !important;
-  margin-top: 10rem;
+  letter-spacing: 1px;
+  margin: calc(var(--tilt-angle) * 2) 0 var(--tilt-angle) 0;
 }

@@ -15,14 +15,26 @@ new (class {
     return this.global.document;
   }
 
+  /**
+   * @type {HTMLElement}
+   * @readonly
+   */
   get carousel() {
     return this.document.querySelector(".carousel");
   }
 
+  /**
+   * @type {(NodeListOf<HTMLLIElement>)}
+   * @readonly
+   */
   get slides() {
     return this.carousel.querySelectorAll(".slides li");
   }
 
+  /**
+   * @type {HTMLElement}
+   * @readonly
+   */
   get controls() {
     let rtnControls = this.document.querySelector(".controls");
 
@@ -45,20 +57,24 @@ new (class {
     return rtnControls;
   }
 
-  createDot = () => {
-    const dot = this.document.createElement("li");
-    dot.tabIndex = 0;
-    return dot;
-  };
-
+  /**
+   * @type {HTMLLIElement[]}
+   * @readonly
+   */
   get dots() {
     let rtnDots = this.controls.querySelectorAll(".dots li");
 
     if (!rtnDots || rtnDots.length === 0) {
+      const createDot = () => {
+        const dot = this.document.createElement("li");
+        dot.tabIndex = 0;
+        return dot;
+      };
+
       rtnDots = [...this.slides].map(() =>
         this.controls
           .querySelector(".dots")
-          .appendChild(this.createDot())
+          .appendChild(createDot())
       );
     }
 
@@ -69,12 +85,13 @@ new (class {
     return this.slides[this.slideIndex - 1];
   }
 
+  /**
+   * Anonymous class, to manage scoping and share global context.
+   *
+   * @param global {Window}
+   */
   constructor(global) {
     this.global = global;
-    this.init();
-  }
-
-  init() {
     this.addEventListeners();
     this.showSlide();
   }
