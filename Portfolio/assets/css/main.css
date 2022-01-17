@@ -4,6 +4,7 @@
   --max-width: 900px;
   --tilt-angle: 5rem;
   --tilt-angle-negative: calc(0px - var(--tilt-angle));
+  --vertical-padding: 5vh;
 
   /* TYPOGRAPHY */
   --ff-primary: "Poppins", Helvetica, sans-serif;
@@ -93,6 +94,7 @@ p {
 a {
   color: var(--clr-accent__500);
   text-decoration: none !important;
+  transition: all 0.3s;
 }
 
 a:hover,
@@ -101,15 +103,6 @@ a:focus {
   color: rgba(255, 255, 255, 0.75);
   text-shadow: 0 0 1rem var(--clr-accent__500),
     0 0 1rem var(--clr-accent__500);
-}
-
-section,
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-top: auto;
 }
 
 input,
@@ -127,6 +120,19 @@ input:focus,
 textarea:focus,
 footer button:focus {
   border-color: var(--clr-accent__500);
+}
+
+section {
+  padding: calc(var(--vertical-padding) * 2) 0;
+}
+
+section,
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: auto;
 }
 
 footer button::before {
@@ -255,7 +261,7 @@ aside {
 
 .hero__content {
   position: sticky;
-  top: var(--tilt-angle);
+  top: 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -348,7 +354,6 @@ aside {
 .intro {
   z-index: 0;
   position: relative;
-  padding: 10vh 0;
   margin-top: calc(var(--tilt-angle-negative) - 1px);
   clip-path: polygon(0 var(--tilt-angle),
       100% 0,
@@ -413,7 +418,6 @@ aside {
   color: var(--clr-primary__500);
   background-color: var(--clr-accent__500);
   margin-top: calc(var(--tilt-angle-negative) - 1px);
-  padding-top: 3rem;
   clip-path: polygon(0 0,
       100% var(--tilt-angle),
       100% calc(100% - var(--tilt-angle)),
@@ -796,7 +800,7 @@ aside {
   border: none;
   fill: var(--clr-accent__500);
   padding: 0 3rem;
-  width: auto;
+  width: 12rem;
   height: 7rem;
   cursor: pointer;
 }
@@ -836,7 +840,7 @@ aside {
   flex-direction: row;
   list-style: none;
   font-size: 3rem;
-  padding: 2.25rem;
+  padding: 0 2.25rem;
   border-radius: 1rem;
 }
 
@@ -847,17 +851,22 @@ aside {
   margin-left: 1.5rem;
 }
 
-#menu li:last-of-type a {
+#menu li:last-of-type {
   border: 0;
+}
+
+.menu__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 7rem;
 }
 
 .menu__link .fa {
   display: none;
   position: fixed;
-  left: 50%;
   opacity: 0.1;
   font-size: 2em;
-  transform: translate(-50%, -25%);
 }
 
 /* RESPONSIVE */
@@ -909,6 +918,10 @@ aside {
     box-shadow: 0 0 0.5em 0 rgb(0 0 0 / 50%);
   }
 
+  #menu li {
+    border-bottom: 1px solid var(--clr-primary__100);
+  }
+
   .menu__link {
     font-family: var(--ff-secondary);
     font-weight: 500;
@@ -918,7 +931,6 @@ aside {
     padding: 0.5em 0.25em;
     text-decoration: none;
     text-align: center;
-    border-bottom: 1px solid var(--clr-primary__100);
     width: 100%;
   }
 
