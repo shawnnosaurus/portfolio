@@ -11,8 +11,8 @@
   --ff-secondary: "Six Caps", sans-serif;
 
   /* THEME */
-  --clr-accent__100: rgba(3, 175, 194, 0.8);
-  --clr-accent__500: rgb(3, 175, 194);
+  --clr-accent__100: rgba(42, 159, 172, 0.8);
+  --clr-accent__500: rgb(42, 159, 172);
   --clr-accent__900: rgb(41, 90, 95);
 
   --clr-primary__100: rgba(255, 255, 255, 0.25);
@@ -100,8 +100,7 @@ a:hover,
 a:focus {
   text-decoration: underline;
   color: rgba(255, 255, 255, 0.75);
-  text-shadow: 0 0 1rem var(--clr-accent__500),
-    0 0 1rem var(--clr-accent__500);
+  text-shadow: 0 0 1rem var(--clr-accent__500), 0 0 1rem var(--clr-accent__500);
 }
 
 input,
@@ -154,7 +153,7 @@ footer button:focus::before {
 }
 
 /* THEME */
-section>article,
+section > article,
 .footer__content {
   position: relative;
   width: 100%;
@@ -233,10 +232,7 @@ aside {
   display: flex;
   align-items: center;
   justify-content: center;
-  clip-path: polygon(0 0,
-      100% 0,
-      100% calc(100% - var(--tilt-angle)),
-      0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--tilt-angle)), 0 100%);
   background-color: var(--clr-primary__500);
   background-image: url("../../assets/img/hero.webp");
   background-position: center top;
@@ -253,9 +249,11 @@ aside {
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(var(--clr-primary__400) 0%,
-      var(--clr-primary__500) 95%,
-      var(--clr-primary__500) 100%);
+  background-image: linear-gradient(
+    var(--clr-primary__400) 0%,
+    var(--clr-primary__500) 95%,
+    var(--clr-primary__500) 100%
+  );
 }
 
 .hero__content {
@@ -358,10 +356,12 @@ aside {
   z-index: 0;
   position: relative;
   margin-top: calc(var(--tilt-angle-negative) - 1px);
-  clip-path: polygon(0 var(--tilt-angle),
-      100% 0,
-      100% 100%,
-      0 calc(100% - var(--tilt-angle)));
+  clip-path: polygon(
+    0 var(--tilt-angle),
+    100% 0,
+    100% 100%,
+    0 calc(100% - var(--tilt-angle))
+  );
 }
 
 .intro::after {
@@ -421,10 +421,12 @@ aside {
   color: var(--clr-primary__500);
   background-color: var(--clr-accent__500);
   margin-top: calc(var(--tilt-angle-negative) - 1px);
-  clip-path: polygon(0 0,
-      100% var(--tilt-angle),
-      100% calc(100% - var(--tilt-angle)),
-      0 100%);
+  clip-path: polygon(
+    0 0,
+    100% var(--tilt-angle),
+    100% calc(100% - var(--tilt-angle)),
+    0 100%
+  );
   background-image: url("../../assets/img/tie_fighter.webp");
   background-repeat: no-repeat;
   background-size: 30rem;
@@ -538,13 +540,14 @@ aside {
 
 .portfolio {
   background-color: var(--clr-primary__900);
-  background-image: linear-gradient(var(--color-accent__dark),
-      transparent);
+  background-image: linear-gradient(var(--color-accent__dark), transparent);
   margin-top: calc(var(--tilt-angle-negative) - 1px);
-  clip-path: polygon(0 var(--tilt-angle),
-      100% 0,
-      100% 100%,
-      0 calc(100% - var(--tilt-angle)));
+  clip-path: polygon(
+    0 var(--tilt-angle),
+    100% 0,
+    100% 100%,
+    0 calc(100% - var(--tilt-angle))
+  );
 }
 
 .portfolio__items {
@@ -641,7 +644,7 @@ aside {
   padding-top: 0.1em;
 }
 
-.portfolio__content>.portfolio__title::after {
+.portfolio__content > .portfolio__title::after {
   content: "";
   right: 0;
   width: 100%;
@@ -662,6 +665,11 @@ aside {
   background-color: var(--color-accent__dark);
   margin-top: calc(var(--tilt-angle-negative) - 1px);
   clip-path: polygon(0 0, 100% var(--tilt-angle), 100% 100%, 0 100%);
+  padding: 0;
+}
+
+.skills__content {
+  padding-bottom: 0;
 }
 
 .skills__title {
@@ -684,10 +692,11 @@ aside {
   border-radius: 1rem;
 }
 
-.skills__items {
+.skills__items iframe {
   overflow: hidden;
-  width: 100%;
-  height: 100vh;
+  width: 1000px;
+  height: 900px;
+  transform: scale(0.8) translateX(-9%);
 }
 
 .footer__content {
@@ -785,7 +794,8 @@ aside {
 }
 
 .copyright {
-  width: 100%;
+  position: absolute;
+  left: 5rem;
   padding: 5rem 4rem;
   font-size: 3rem;
   color: var(--clr-primary__100);
@@ -812,7 +822,8 @@ aside {
 .hamburger:focus {
   text-decoration: underline;
   fill: rgba(255, 255, 255, 0.75);
-  filter: drop-shadow(0 0 0.5rem var(--clr-accent__500)) drop-shadow(0 0 0.5rem var(--clr-accent__500));
+  filter: drop-shadow(0 0 0.5rem var(--clr-accent__500))
+    drop-shadow(0 0 0.5rem var(--clr-accent__500));
 }
 
 .hamburger label {
@@ -939,6 +950,10 @@ aside {
 
   .menu__link .fa {
     display: flex;
+  }
+
+  .skills {
+    display: none;
   }
 }
 
