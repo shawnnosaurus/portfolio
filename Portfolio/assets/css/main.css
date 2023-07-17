@@ -153,7 +153,7 @@ footer button:focus::before {
 }
 
 /* THEME */
-section>article,
+section > article,
 .footer__content {
   position: relative;
   width: 100%;
@@ -270,9 +270,11 @@ aside {
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(var(--clr-primary__400) 0%,
-      var(--clr-primary__500) 95%,
-      var(--clr-primary__500) 100%);
+  background-image: linear-gradient(
+    var(--clr-primary__400) 0%,
+    var(--clr-primary__500) 95%,
+    var(--clr-primary__500) 100%
+  );
 }
 
 .hero__content {
@@ -375,10 +377,12 @@ aside {
   z-index: 0;
   position: relative;
   margin-top: calc(var(--tilt-angle-negative) - 1px);
-  clip-path: polygon(0 var(--tilt-angle),
-      100% 0,
-      100% 100%,
-      0 calc(100% - var(--tilt-angle)));
+  clip-path: polygon(
+    0 var(--tilt-angle),
+    100% 0,
+    100% 100%,
+    0 calc(100% - var(--tilt-angle))
+  );
   text-shadow: -2px 2px 3px var(--clr-primary__400);
 }
 
@@ -397,6 +401,7 @@ aside {
   z-index: 0;
   position: relative;
   width: calc(100% - 50rem);
+  max-width: calc(var(--max-width) - 50rem);
   box-shadow: inset 0 0 3px var(--clr-primary__400);
   border-radius: 1rem;
   text-align: center;
@@ -428,10 +433,12 @@ aside {
   background-color: var(--clr-primary__500);
   background-color: var(--clr-primary__900);
   margin-top: calc(var(--tilt-angle-negative) - 1px);
-  clip-path: polygon(0 0,
-      100% var(--tilt-angle),
-      100% calc(100% - var(--tilt-angle)),
-      0 100%);
+  clip-path: polygon(
+    0 0,
+    100% var(--tilt-angle),
+    100% calc(100% - var(--tilt-angle)),
+    0 100%
+  );
   background-image: url("../../assets/img/tie_fighter.webp");
   background-repeat: no-repeat;
   background-size: 30rem;
@@ -544,10 +551,12 @@ aside {
   background-color: var(--clr-primary__500);
   background-image: linear-gradient(var(--color-accent__dark), transparent);
   margin-top: calc(var(--tilt-angle-negative) - 1px);
-  clip-path: polygon(0 var(--tilt-angle),
-      100% 0,
-      100% 100%,
-      0 calc(100% - var(--tilt-angle)));
+  clip-path: polygon(
+    0 var(--tilt-angle),
+    100% 0,
+    100% 100%,
+    0 calc(100% - var(--tilt-angle))
+  );
 }
 
 .portfolio__items {
@@ -653,7 +662,7 @@ aside {
   padding-top: 0.1em;
 }
 
-.portfolio__content>.portfolio__title::after {
+.portfolio__content > .portfolio__title::after {
   content: "";
   right: 0;
   width: 100%;
@@ -828,7 +837,8 @@ footer {
 .hamburger:focus {
   text-decoration: underline;
   fill: rgba(255, 255, 255, 0.75);
-  filter: drop-shadow(0 0 0.5rem var(--clr-accent__500)) drop-shadow(0 0 0.5rem var(--clr-accent__500));
+  filter: drop-shadow(0 0 0.5rem var(--clr-accent__500))
+    drop-shadow(0 0 0.5rem var(--clr-accent__500));
 }
 
 .hamburger label {
