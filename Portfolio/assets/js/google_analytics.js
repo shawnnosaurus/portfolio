@@ -54,7 +54,7 @@ new (class {
 
     gaNotice = this.document.createElement('aside');
     gaNotice.id = id;
-    gaNotice.setAttribute('style', 'z-index:2;position:fixed;bottom:0;top:auto;width:65vw;height:auto;right:auto;color:white !important;backdrop-filter:blur(5px);padding:3rem;background:rgb(35,35,35,0.75)');
+    gaNotice.setAttribute('style', 'z-index:2;position:fixed;bottom:0;top:auto;width:65dvw;height:auto;right:auto;color:white !important;backdrop-filter:blur(5px);padding:3rem;background:rgb(35,35,35,0.75)');
 
     const btnAccept = this.document.createElement('button');
     btnAccept.textContent = "Ok";

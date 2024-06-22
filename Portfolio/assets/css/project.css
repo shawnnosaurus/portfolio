@@ -4,18 +4,7 @@ body {
   position: relative;
   font-size: 3rem;
   padding: 1.5rem 3rem;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url(../../assets/img/hero.webp);
-  background-attachment: fixed;
-  background-position: center top;
-  background-size: cover;
-  opacity: 0.05;
-  filter: blur(5px);
+  background-image: var(--clr-primary__500);
 }
 
 ul {
@@ -44,6 +33,21 @@ body>p {
 
 body>p+body>p {
   margin-top: 1.75rem;
+}
+
+.portfolio__background {
+  position: fixed;
+  inset: 0;
+  height: 100dvh;
+  width: 100dvw;
+  object-fit: cover;
+  opacity: 0.05;
+  z-index: -1;
+}
+
+.portfolio__background * {
+  height: 100%;
+  width: 100%;
 }
 
 .callout {
@@ -146,7 +150,7 @@ body>p+body>p {
 }
 
 .carousel img {
-  max-height: 95vh;
+  max-height: 95dvh;
   vertical-align: middle;
   opacity: 0.75;
 }

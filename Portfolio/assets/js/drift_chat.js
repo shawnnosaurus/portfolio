@@ -38,7 +38,7 @@ new (class {
     rtnPlaceholderDiv.title = 'Loading chat...';
     rtnPlaceholderDiv.ariaHidden = true;
     rtnPlaceholderDiv.tabIndex = -1;
-    rtnPlaceholderDiv.setAttribute('style', 'z-index:2;background:#5c6282;opacity:0.25;position:fixed;right:4vmin;bottom:4vmin;padding:15px;border-radius:50%');
+    rtnPlaceholderDiv.setAttribute('style', 'z-index:2;background:#5c6282;opacity:0.25;position:fixed;right:4dvmin;bottom:4dvmin;padding:15px;border-radius:50%');
     rtnPlaceholderDiv.innerHTML += `
       <svg width="25" height="23" viewBox="0 0 25 23">
         <path fill="#ffffff"

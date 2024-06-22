@@ -6,14 +6,14 @@
 
 html {
   color: #fff;
-  font-size: 1vmin;
+  font-size: 1dvmin;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
   display: flex;
   justify-content: flex-end;
-  height: 100vh;
+  height: 100dvh;
   background: #000;
   background-image: url("https://uploads.codesandbox.io/uploads/user/6c1df696-43ea-4c58-a664-391b005f6bd9/-qrp-bg.jpg");
   background-size: contain;
