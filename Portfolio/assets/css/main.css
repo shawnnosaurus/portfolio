@@ -4,15 +4,16 @@
   --max-width: 900px;
   --tilt-angle: 5rem;
   --tilt-angle-negative: calc(0px - var(--tilt-angle));
-  --vertical-padding: 5vh;
+  --vertical-padding: 5dvh;
 
   /* TYPOGRAPHY */
-  --ff-primary: "Poppins", Helvetica, sans-serif;
+  --ff-primary: "Montserrat", Helvetica, sans-serif;
   --ff-secondary: "Six Caps", sans-serif;
 
   /* THEME */
-  --clr-accent__100: rgba(42, 159, 172, 0.8);
+  --clr-accent__100: rgba(42, 159, 172, 0.75);
   --clr-accent__500: rgb(42, 159, 172);
+  --clr-accent__700: rgba(8, 20, 26, 0.75);
   --clr-accent__900: rgb(41, 90, 95);
 
   --clr-primary__100: rgba(255, 255, 255, 0.25);
@@ -33,8 +34,8 @@
 }
 
 *::-webkit-scrollbar {
-  width: 0.75vw;
-  height: 0.75vh;
+  width: 0.75dvw;
+  height: 0.75dvh;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -58,7 +59,7 @@
 html,
 body {
   scroll-behavior: smooth;
-  font-size: min(1vmin, 5px);
+  font-size: min(1dvmin, 5px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,7 +68,7 @@ body {
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   font-family: var(--ff-primary);
   font-size: 2rem;
   color: rgba(255, 255, 255, 0.75);
@@ -79,8 +80,8 @@ main {
   position: absolute;
   top: 0;
   right: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 100dvh;
+  width: 100dvw;
 }
 
 img {
@@ -176,7 +177,7 @@ section.skills::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url(../../assets/img/hero.webp);
+  background-image: url(../../assets/img/portfolio_background.webp);
   background-attachment: fixed;
   background-position: center top;
   background-size: cover;
@@ -254,11 +255,11 @@ aside {
   justify-content: center;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--tilt-angle)), 0 100%);
   background-color: var(--clr-primary__500);
-  background-image: url("../../assets/img/hero.webp");
+  background-image: url("../../assets/img/portfolio_background.webp");
   background-attachment: fixed;
   background-position: center top;
   background-size: cover;
-  height: calc(100vh + var(--tilt-angle));
+  height: calc(100dvh + var(--tilt-angle));
   max-width: 100%;
 }
 
@@ -355,7 +356,7 @@ aside {
   justify-content: space-evenly;
   list-style: none;
   font-size: 5rem;
-  width: 50%;
+  width: 75%;
   font-weight: 600;
   animation: hero__sub-title--load 0.7s ease-in forwards;
 }
@@ -364,7 +365,7 @@ aside {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid var(--clr-primary__100);
+  outline: 1px solid var(--clr-primary__100);
   border-radius: 50%;
   height: 10rem;
   width: 10rem;
@@ -390,8 +391,8 @@ aside {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   object-fit: fill;
   opacity: 0.5;
 }
@@ -430,7 +431,6 @@ aside {
 
 .about-me {
   font-size: 4rem;
-  background-color: var(--clr-primary__500);
   background-color: var(--clr-primary__900);
   margin-top: calc(var(--tilt-angle-negative) - 1px);
   clip-path: polygon(
@@ -441,9 +441,8 @@ aside {
   );
   background-image: url("../../assets/img/tie_fighter.webp");
   background-repeat: no-repeat;
-  background-size: 30rem;
+  background-size: 7.5em;
   background-position: top right;
-  background-blend-mode: screen;
 }
 
 .about-me__content {
@@ -538,7 +537,7 @@ aside {
 
 .about-me__image img {
   width: auto;
-  max-height: calc(100vh - 12rem);
+  max-height: calc(100dvh - 12rem);
   height: auto;
   margin: auto 0;
   border-radius: 0.5rem;
@@ -547,7 +546,6 @@ aside {
 }
 
 .portfolio {
-  background-color: var(--clr-primary__900);
   background-color: var(--clr-primary__500);
   background-image: linear-gradient(var(--color-accent__dark), transparent);
   margin-top: calc(var(--tilt-angle-negative) - 1px);
@@ -571,7 +569,7 @@ aside {
 .portfolio__item {
   position: relative;
   display: flex;
-  border-radius: 1rem;
+  border-radius: 2rem;
 }
 
 .portfolio__item picture {
@@ -591,12 +589,14 @@ aside {
   grid-row: 1 / span 2;
 }
 
+.portfolio__item > a,
 .portfolio__link {
   position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
+  text-shadow: none;
   color: #fff;
   overflow: hidden;
   cursor: pointer;
@@ -606,7 +606,7 @@ aside {
   content: "";
   position: absolute;
   inset: 0;
-  box-shadow: inset 0 0 3px var(--clr-primary__900);
+  box-shadow: inset 0 0 5px 1px var(--clr-primary__900);
 }
 
 .portfolio__image {
@@ -615,6 +615,7 @@ aside {
   width: 100%;
   height: 100%;
   transition: transform 1s;
+  aspect-ratio: 1;
 }
 
 .portfolio__item:hover .portfolio__image,
@@ -630,11 +631,11 @@ aside {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background: var(--clr-accent__100);
+  background: var(--clr-accent__700);
   display: flex;
   flex-direction: column;
   text-align: left;
-  padding: 0 1rem;
+  padding: 1em;
   opacity: 0;
   transition: opacity 300ms, backdrop-filter 300ms;
 }
@@ -658,8 +659,9 @@ aside {
   font-family: var(--ff-secondary);
   font-weight: 300;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   padding-top: 0.1em;
+  line-height: 1.25;
 }
 
 .portfolio__content > .portfolio__title::after {
@@ -675,8 +677,10 @@ aside {
 }
 
 .portfolio__desc {
+  line-height: 1;
   font-size: 3rem;
   margin-top: auto;
+  margin-bottom: 0.25em;
 }
 
 .skills {
@@ -843,7 +847,7 @@ footer {
 
 .hamburger label {
   position: absolute;
-  top: -100vh;
+  top: -100dvh;
   height: 0;
   color: transparent;
 }
@@ -931,7 +935,7 @@ footer {
     user-select: none;
     z-index: 3;
     backdrop-filter: blur(3px);
-    transform: translateY(-101vh);
+    transform: translateY(-101dvh);
     transition: transform 0.3s;
   }
 
