@@ -98,24 +98,31 @@
     <li>
       Zustand
     </li>
+    <li>
+      Material UI
+    </li>
   </ul>
 
   <h2>My Contribution</h2>
   <p>
     Created a plugin library, with generic distributed components for reuse throughout the full product and added new features to enable tracking and a quick view dashboard data analytics of each game project development, testing, certification and deployment lifecycle. Along with updates to the main host monolith where the DB, API and primary consuming client reside.
+
     <ul>
       Specifically:
       <li>Created a modulised plugin library to be consumed in isolation from the main monolith host, with isolated dev processes for parallel SDLC work outside of the main host deployment stream.</li>
       <li>Created generic components for reuse within the plugin, the main host and any other dependant plugins of the main monolith host.</li>
+      <li>Created computed values in the dashboard <a href="https://mui.com/x/react-data-grid" >MUI Data Grid</a> with progress bars of all dates colour coded to show at a glance any date milestones at risk or missed.</li>
+      <li>Customised the dashboard with the ability to save and share custom views such as filters, sort ordering and custom grouping by the customers for user preference views.</li>
+      <li>Customised the dashboard to use custom server-side queries with caching for performant pagination and filtering.</li>
       <li>Created the features and functionality for attaining the dates for which the different phases of the game deployment lifecycle are estimated at and log tracking of these updates for audits.</li>
-      <li>Polling of said data into a dashboard view within the scheduler plugin.</li>
+      <li>Polling of said data into a dashboard view within the scheduler plugin, along with custom edits with log tracking of configured dates via a newly created context aware and configurable sidebar of the plugin.</li>
       <li>Created dynamic checklists for deployment requirements dependant upon deployment locale, game types and specific studios, based off an extendable configured JSON workflows on the server.</li>
     </ul>
   </p>
 
   <h2>Product Description</h2>
   <p>
-    WiP...
+    The Distribution Scheduler is a micro-frontend plugin consumed by the main game distribution portal, giving a customisable overview of the entire roadmap for each given game project being worked on and ship live.
   </p>
 
   <footer aria-hidden="true">
