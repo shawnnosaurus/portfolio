@@ -9,7 +9,6 @@ body {
 
 ul {
   width: 100%;
-  list-style: none;
   max-width: var(--max-width);
   margin-left: auto !important;
   margin-right: auto !important;
@@ -25,13 +24,13 @@ h5 {
   margin: 2rem auto;
 }
 
-body>p {
+body > p {
   width: 100%;
   max-width: var(--max-width);
   margin: 0.5rem auto;
 }
 
-body>p+body>p {
+body > p + body > p {
   margin-top: 1.75rem;
 }
 
@@ -73,6 +72,7 @@ body>p+body>p {
 }
 
 .tags {
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
   margin: 1rem -1rem;
@@ -170,7 +170,9 @@ body>p+body>p {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-  text-shadow: var(--clr-primary__400) 0 0 1px, var(--clr-primary__400) 0 0 1px,
+  text-shadow:
+    var(--clr-primary__400) 0 0 1px,
+    var(--clr-primary__400) 0 0 1px,
     var(--clr-primary__400) 0 0 1px;
 }
 
@@ -193,7 +195,9 @@ body>p+body>p {
   font-size: 3rem;
   letter-spacing: 1px;
   font-weight: 900;
-  text-shadow: var(--clr-primary__400) 0 0 1px, var(--clr-primary__400) 0 0 1px,
+  text-shadow:
+    var(--clr-primary__400) 0 0 1px,
+    var(--clr-primary__400) 0 0 1px,
     var(--clr-primary__400) 0 0 1px;
   padding: 0.5em;
   margin: 0;
