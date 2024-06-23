@@ -7,6 +7,19 @@ body {
   background-image: var(--clr-primary__500);
 }
 
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(../../assets/img/portfolio_background.webp);
+  background-attachment: fixed;
+  background-position: center top;
+  background-size: cover;
+  opacity: 0.025;
+  filter: blur(5px);
+  z-index: -1;
+}
+
 ul {
   width: 100%;
   max-width: var(--max-width);
@@ -43,11 +56,6 @@ body > p + body > p {
   object-fit: cover;
   opacity: 0.05;
   z-index: -1;
-}
-
-.portfolio__background * {
-  height: 100%;
-  width: 100%;
 }
 
 .callout {
