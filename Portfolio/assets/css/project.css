@@ -12,6 +12,7 @@ ul {
   max-width: var(--max-width);
   margin-left: auto !important;
   margin-right: auto !important;
+  list-style: none;
 }
 
 h1,
@@ -86,11 +87,21 @@ body > p + body > p {
   background-color: var(--clr-accent__900);
 }
 
+.project_contributions {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  padding-top: 1.5em;
+}
+
+.project_contributions li {
+  padding: 0.5em 0;
+}
+
 .carousel {
   color: #eee;
   font-size: 3rem;
   position: relative;
-  margin: auto;
+  margin: 0 auto;
   text-align: center;
 }
 
